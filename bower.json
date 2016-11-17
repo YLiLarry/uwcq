@@ -2,6 +2,8 @@
   "name": "uwcs",
   "dependencies": {
     "ember": "~2.9.0",
-    "ember-cli-shims": "0.1.3"
+    "ember-cli-shims": "0.1.3",
+    "bootstrap": "boostrap#3.3.7",
+    "ramda": "0.22.1"
   }
 }
