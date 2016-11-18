@@ -1,0 +1,20 @@
+{{component 'home-head'}}
+<div id="home-body" class="state-{{state}}">
+   <div id="home-body-left">
+   {{component 'home-search-filters'}}
+   {{component 'home-search-results'}}
+   </div><div id="home-body-right">
+   {{component 'home-searchbar' 
+      onSearch=(action "onSearch")
+      onSearchClicked=(action "onSearchClicked")}}
+   <div id="home-course-entries">
+   {{#each courses as |c|}}
+      {{component 'home-course-entry' 
+         courseName="ECON" 
+         courseNum="101" 
+         courseTitle="Introduction to Micro economics"
+         onAddCourse=(action "onAddCourse")}}
+   {{/each}}
+   </div>
+   </div>
+</div>

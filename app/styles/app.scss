@@ -1,0 +1,281 @@
+@import "globals";
+@import "home-course-entry";
+
+
+body {
+   background-color: $THEME_BLACK;
+   font-family: "Helvetica Neue";
+}
+
+#home-searchbar {
+   position: relative;
+   transition: 0.7s;
+   margin: 0 auto;
+}
+
+#home-searchbar input {
+   opacity: 0.9;
+}
+
+#home-searchbar input:focus {
+   opacity: 1;
+}
+
+.state-1 #home-searchbar {
+   margin: 3em 10em; 
+   margin-top: calc(40vh - 3em);
+}
+
+.state-2 #home-searchbar {
+   margin: 3em 3em 2em 3em; 
+}
+
+#home-course-entries {
+   transition: 0.7s;
+   transition-delay: 0.7s;
+   overflow: hidden;
+}
+
+.state-1 #home-course-entries {
+   height: 0;
+}
+
+.state-2 #home-course-entries {
+   height: 80vh;
+}
+
+.has-feedback-left input.form-control {
+  padding-left: 40px; 
+  padding-right: 12px; 
+}
+.has-feedback-left .form-control-feedback {
+  left: 0;
+}
+
+#home-head {
+   width: 100%;
+   padding: 0.7em 1em;
+   height: 3em;
+   background-color: $THEME_BLACK;
+}
+
+#home-head-logo .uw {
+   color: $THEME_BLUE_L; 
+   font-size: 1.2em;
+   font-style: bold;
+}
+
+#home-head-logo .name {
+   color: #cccccc;
+   font-size: 1.2em;
+   font-style: italic;
+}
+
+.home-course-entry {
+   margin: 0.25em 3em 0.5em 3em;
+   background-color: transparent;
+   border-radius: 4px;
+   overflow: hidden;
+   /*background-color: rgba(256,256,256,0.9) !important;  */
+   /*background-color: #fefefe;*/
+}
+
+.home-course-entry .body {
+   padding-left: 1em;
+   padding-right: 1em;
+} 
+
+.home-course-entry .body {
+   padding-top: 1em;
+   padding-bottom: 0.1em;
+}
+
+.home-course-entry .head {
+   color: #666;
+   position: relative;
+   height: 3.5em;
+   
+   border-radius: 4px;
+   border-color: transparent; 
+   overflow: hidden;
+   background-color: rgba(255,255,255,0.9);  
+}
+
+.home-course-entry .head span {
+   vertical-align: middle;
+}
+
+.home-course-entry .head .expand-bar {
+   width: calc(100% - 6em);
+   height: 3.5em;
+   line-height: 3.5em;
+   display: inline-block;
+   position: absolute;
+   z-index: 1;
+}
+
+.home-course-entry .head .expand-bar span {
+   font-size: 1.2em;
+}
+
+.home-course-entry .head .expand-bar i {
+   opacity: 0.5;
+   font-size: 0.8em;
+}
+
+
+.clickable {
+   cursor: pointer;
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+.home-course-entry.expanded,
+.home-course-entry .head:hover {
+   background-color: rgba(256,256,256,0.95);
+}
+
+.home-course-entry.expanded .head,
+.home-course-entry .head:hover {
+   background-color: #eee;
+   opacity: 1;
+}
+
+.home-course-entry.expanded .head {
+   border-radius: 0;
+}
+
+/*
+.home-course-entry .name,
+.home-course-entry .expand-bar .glyphicon,
+.home-course-entry .number,
+.home-course-entry .title {
+   line-height: 3em;
+}*/
+
+.home-course-entry .expand-bar .glyphicon {
+   margin-left: 1em;
+}
+
+.home-course-entry .title {
+   text-transform: uppercase;
+}
+
+.home-course-entry .add-course {
+   color: #aaa;
+   height: 100%;
+   /*padding: 0 2em;*/
+   text-align: center;
+   line-height: 3.5em;
+   position: absolute;
+   display: flex;
+   right: 0;
+   top: 0;
+   
+/*   border: 1px solid transition;
+   border-top-right-radius: 4px;
+   border-bottom-right-radius: 4px;*/
+}
+
+.home-course-entry .add-course:hover .plus-button {
+   background-color: $THEME_BLUE;
+   color: white;
+}
+
+.home-course-entry .add-course .plus-button {
+   display: inline-block;
+   font-size: 1em;
+   height: 100%;
+   padding: 0 auto;
+   width: 6em;
+   border-left: 1px solid #ccc;
+   right: 0;
+   position: absolute;
+}
+
+.home-course-entry .add-course .ribbon-left {
+   right: 9em;
+   position: absolute;
+}
+
+.home-course-entry .add-course .hint {
+   display: inline-block;
+   font-size: 1em;
+   padding: 0 auto;
+   border-left: 1px solid #ccc;
+   width: 12em;
+   position: absolute;
+   right: 6em;
+   display: none;
+}
+
+.home-course-entry .add-course .hint .text {
+   background-color: $THEME_GREY;
+   display: inline-block;
+   position: absolute;
+   width: 9em;
+   right: 0;
+}
+
+.home-course-entry.expanded .head .hint,
+.home-course-entry .head:hover .hint {
+   display: inline-block;
+   z-index: 0;
+}
+.home-course-entry.expanded .head .expand-bar,
+.home-course-entry .head:hover .expand-bar {
+   background-color: inherit;   
+}
+
+.home-course-entry .add-course:hover + .expand-bar {
+   transition: width 0.4s;
+   width: calc(100% - 17em);
+}
+
+.home-course-entry .add-course:hover .plus-button {
+   border-left-color: transparent;
+}
+
+
+#home-search-filters {
+   height: 100px;
+   margin: 1em;
+}
+
+#home-body {
+   width: 100vw;
+   height: calc(100vh - 3em);
+   margin: 0;
+   padding: 0;
+   background-image: url("../images/waterloo_sign.png");
+   background-attachment: fixed;
+   background-size: cover;
+   overflow: scroll;
+   position: absolute;
+}
+
+#home-body-left {
+   width: 25vw;
+   position: absolute;
+   left: -25vw;
+   display: inline-block;
+   overflow: hidden;
+}
+#home-body-right {
+   width: 100vw;
+   position: absolute;
+   display: inline-block;
+}
+
+.ribbon-left {
+   border-top:1.8em solid $THEME_GREY;
+   border-bottom:1.8em solid $THEME_GREY;
+   /* Don't set the left border */
+   border-left:1.8em solid transparent; /* Right one transparent */
+   width:0; /* Increase Width */
+   height:0;  /* Remove Height */
+   display: inline-block;
+}

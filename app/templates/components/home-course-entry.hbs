@@ -1,0 +1,53 @@
+<div class="home-course-entry panel {{if expanded 'expanded' ''}}">
+   <div class="head">
+      <div class="add-course clickable" onClick={{action 'onAddCourse'}}>
+         <div class="hint">
+            <div class="ribbon-left"></div>
+            <div class="text">Take this course</div>
+         </div>
+         <div class="plus-button"><i class="glyphicon glyphicon-plus"></i></div>
+      </div>
+      <div class="expand-bar clickable" onClick={{action "expand"}}>
+         <i class="glyphicon glyphicon-chevron-{{if expanded 'up' 'down'}}"></i>
+         <span class="name">{{courseName}}</span> <span class="number">{{courseNum}}:</span> 
+         <span class="title">{{courseTitle}}</span>
+      </div>
+   </div>
+   {{#if expanded}} 
+   <div class="body">
+      <table class="table">
+         <thead>
+            <tr>
+               <th>Section</th> 
+               <th>Day</th> 
+               <th>Time</th> 
+               <th>Instructor</th> 
+               <th>Capacity</th> 
+               <th>Enrolled</th> 
+               <th></th> 
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>Section 01</td>
+               <td>MWF</td>
+               <td>10:00pm-12:00pm</td>
+               <td>Jonesason Weasfdaesta</td>
+               <td>70</td>
+               <td>100</td>
+               <td><button type="botton" class="btn btn-link">Prefer this section</button></td>
+            </tr>
+            <tr>
+               <td>Section 01</td>
+               <td>MWF</td>
+               <td>10:00pm-12:00pm</td>
+               <td>Jonesason Weasfdaesta</td>
+               <td>70</td>
+               <td>100</td>
+               <td><button type="botton" class="btn btn-link">Prefer this section</button></td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+   {{/if}} 
+</div>
