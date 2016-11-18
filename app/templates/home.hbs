@@ -1,3 +1,4 @@
+{{{expandedEntry}}}
 {{component 'home-head'}}
 <div id="home-body" class="state-{{state}}">
    <div id="home-body-left">
@@ -10,10 +11,14 @@
    <div id="home-course-entries">
    {{#each courses as |c|}}
       {{component 'home-course-entry' 
+         id=c.id
          courseName="ECON" 
          courseNum="101" 
          courseTitle="Introduction to Micro economics"
-         onAddCourse=(action "onAddCourse")}}
+         onAddCourse=(action "onAddCourse")
+         expandedEntry=expandedEntry
+         getParent=get
+         setParent=set}}
    {{/each}}
    </div>
    </div>

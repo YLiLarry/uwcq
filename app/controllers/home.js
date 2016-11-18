@@ -2,10 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
    actions: {
-      onSearch: function(event) {
+      onSearch: function() {
          console.log("onSearch");
       },
-      onAddCourse: function(event) {
+      onAddCourse: function() {
          if (this.get('addFirstCourse')) {
             this.set('addFirstCourse', false);
             $("#home-body-right").animate({
@@ -17,13 +17,17 @@ export default Ember.Controller.extend({
             });
          }
       },
-      onSearchClicked: function(event) {
+      onSearchClicked: function() {
          this.set("searchClicked", true);
          this.set("state", 2);
+      },
+      onExpand: function(id) {
+         this.set('expanedEntry', id);
       }
    },
-   courses: R.range(0,5),
+   courses: R.map((id) => ({id:id}),R.range(0,10)),
    searchClicked: false,
    addFirstCourse: true,
-   state: 1
+   state: 1,
+   expanedEntry: 0
 });

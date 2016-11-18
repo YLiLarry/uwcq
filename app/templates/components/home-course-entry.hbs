@@ -1,4 +1,4 @@
-<div class="home-course-entry panel {{if expanded 'expanded' ''}}">
+<div class="home-course-entry {{if expanded 'expanded' ''}}">
    <div class="head">
       <div class="add-course clickable" onClick={{action 'onAddCourse'}}>
          <div class="hint">
@@ -9,11 +9,12 @@
       </div>
       <div class="expand-bar clickable" onClick={{action "expand"}}>
          <i class="glyphicon glyphicon-chevron-{{if expanded 'up' 'down'}}"></i>
-         <span class="name">{{courseName}}</span> <span class="number">{{courseNum}}:</span> 
+         <span class="name">{{id}}</span>
+         <span class="name">{{courseName}}</span>
+         <span class="number">{{courseNum}}:</span> 
          <span class="title">{{courseTitle}}</span>
       </div>
    </div>
-   {{#if expanded}} 
    <div class="body">
       <table class="table">
          <thead>
@@ -49,5 +50,4 @@
          </tbody>
       </table>
    </div>
-   {{/if}} 
 </div>

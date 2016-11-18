@@ -11,13 +11,18 @@
 }
 
 .home-course-entry .body {
-   padding-left: 1em;
-   padding-right: 1em;
+   margin: 0;
+   height: 0;
+   padding: 0;
+   overflow: hidden;
 } 
 
-.home-course-entry .body {
+.home-course-entry.expanded .body {
+   padding-left: 1em;
+   padding-right: 1em;
    padding-top: 1em;
    padding-bottom: 0.1em;
+   height: auto;
 }
 
 .home-course-entry .head {
