@@ -1,2 +1,162 @@
 @import "globals";
 
+
+.home-course-entry {
+   margin: 0.25em 3em 0.5em 3em;
+   background-color: transparent;
+   border-radius: 4px;
+   overflow: hidden;
+   /*background-color: rgba(256,256,256,0.9) !important;  */
+   /*background-color: #fefefe;*/
+}
+
+.home-course-entry .body {
+   padding-left: 1em;
+   padding-right: 1em;
+} 
+
+.home-course-entry .body {
+   padding-top: 1em;
+   padding-bottom: 0.1em;
+}
+
+.home-course-entry .head {
+   color: #666;
+   position: relative;
+   height: 3.5em;
+   
+   border-radius: 4px;
+   border-color: transparent; 
+   overflow: hidden;
+   background-color: rgba(255,255,255,0.9);  
+}
+
+.home-course-entry .head span {
+   vertical-align: middle;
+}
+
+.home-course-entry .head .expand-bar {
+   width: calc(100% - 6em);
+   height: 3.5em;
+   line-height: 3.5em;
+   display: inline-block;
+   position: absolute;
+   z-index: 1;
+}
+
+.home-course-entry .head .expand-bar span {
+   font-size: 1.2em;
+}
+
+.home-course-entry .head .expand-bar i {
+   opacity: 0.5;
+   font-size: 0.8em;
+}
+
+
+.home-course-entry.expanded,
+.home-course-entry .head:hover {
+   background-color: rgba(256,256,256,0.95);
+}
+
+.home-course-entry.expanded .head,
+.home-course-entry .head:hover {
+   background-color: #eee;
+   opacity: 1;
+}
+
+.home-course-entry.expanded .head {
+   border-radius: 0;
+}
+
+/*
+.home-course-entry .name,
+.home-course-entry .expand-bar .glyphicon,
+.home-course-entry .number,
+.home-course-entry .title {
+   line-height: 3em;
+}*/
+
+.home-course-entry .expand-bar .glyphicon {
+   margin-left: 1em;
+}
+
+.home-course-entry .title {
+   text-transform: uppercase;
+}
+
+.home-course-entry .add-course {
+   color: #aaa;
+   height: 100%;
+   /*padding: 0 2em;*/
+   text-align: center;
+   line-height: 3.5em;
+   position: absolute;
+   display: flex;
+   right: 0;
+   top: 0;
+   
+/*   border: 1px solid transition;
+   border-top-right-radius: 4px;
+   border-bottom-right-radius: 4px;*/
+}
+
+.home-course-entry .add-course:hover .plus-button {
+   background-color: $THEME_BLUE;
+   color: white;
+}
+
+.home-course-entry .add-course .plus-button {
+   display: inline-block;
+   font-size: 1em;
+   height: 100%;
+   padding: 0 auto;
+   width: 6em;
+   border-left: 1px solid #ccc;
+   right: 0;
+   position: absolute;
+}
+
+.home-course-entry .add-course .ribbon-left {
+   right: 9em;
+   position: absolute;
+}
+
+.home-course-entry .add-course .hint {
+   display: inline-block;
+   font-size: 1em;
+   padding: 0 auto;
+   border-left: 1px solid #ccc;
+   width: 12em;
+   position: absolute;
+   right: 6em;
+   display: none;
+}
+
+.home-course-entry .add-course .hint .text {
+   background-color: $THEME_GREY;
+   display: inline-block;
+   position: absolute;
+   width: 9em;
+   right: 0;
+}
+
+.home-course-entry.expanded .head .hint,
+.home-course-entry .head:hover .hint {
+   display: inline-block;
+   z-index: 0;
+}
+.home-course-entry.expanded .head .expand-bar,
+.home-course-entry .head:hover .expand-bar {
+   background-color: inherit;   
+}
+
+.home-course-entry .add-course:hover + .expand-bar {
+   transition: width 0.4s;
+   width: calc(100% - 17em);
+}
+
+.home-course-entry .add-course:hover .plus-button {
+   border-left-color: transparent;
+}
+
