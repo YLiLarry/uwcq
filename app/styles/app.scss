@@ -9,6 +9,8 @@ body {
    font-family: "Helvetica Neue";
 }
 
+$HOME_WL: 20vw;
+
 #home-body {
    margin: 0;
    padding: 0;
@@ -50,9 +52,9 @@ body {
    }
 
    #home-search-results {
-      width: 25vw;
+      width: $HOME_WL;
       position: absolute;
-      left: -25vw;
+      left: (-$HOME_WL);
       margin: 3em 0; 
    }
    
@@ -99,10 +101,10 @@ body {
    }
    
    #home-search-results {
-      width: 25vw;
+      width: $HOME_WL;
       position: absolute;
       margin: 3em 0; 
-      left: -25vw;
+      left: (-$HOME_WL);
    }
 }
 
@@ -110,7 +112,7 @@ body {
 .state-2 {
    
    #home-search {
-      width: 75vw;
+      width: (100vw - $HOME_WL);
       position: absolute;
       right: 0;
       transition: 0.7s;
@@ -130,7 +132,7 @@ body {
       left: 0;
       position: absolute;
       margin: 3em 1.5em; 
-      width: 25vw;
+      width: $HOME_WL;
       transition: 0.7s;
    }  
 }
@@ -149,18 +151,24 @@ body {
    padding: 0.7em 1em;
    height: 3em;
    background-color: $THEME_BLACK;
-}
+      
+   .uw {
+      color: $THEME_BLUE_L; 
+      font-size: 1.2em;
+      font-style: bold;
+   }
 
-#home-head-logo .uw {
-   color: $THEME_BLUE_L; 
-   font-size: 1.2em;
-   font-style: bold;
-}
-
-#home-head-logo .name {
-   color: #cccccc;
-   font-size: 1.2em;
-   font-style: italic;  
+   .name {
+      color: #cccccc;
+      font-size: 1.2em;
+      font-style: italic;  
+   }
+   
+   .subtitle {
+      color: #888;
+      font-style: italic;  
+      padding-left: 1em;
+   }
 }
 
 

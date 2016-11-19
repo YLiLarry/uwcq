@@ -38,8 +38,6 @@
       color: #666;
       position: relative;
       height: 3.5em;
-      
-      border-radius: 4px;
       border-color: transparent; 
       overflow: hidden;
       background-color: rgba(255,255,255,0.9);  
@@ -50,7 +48,7 @@
    }
 
    .head .expand-bar {
-      width: calc(100% - 6em);
+      width: calc(100% - 5em);
       height: 3.5em;
       line-height: 3.5em;
       display: inline-block;
@@ -72,15 +70,10 @@
    .head:hover {
       background-color: rgba(256,256,256,0.95);
    }
-
-   .home-course-entry.expanded .head,
+   
    .head:hover {
       background-color: #eee;
       opacity: 1;
-   }
-
-   .home-course-entry.expanded .head {
-      border-radius: 0;
    }
 
    .expand-bar .glyphicon {
@@ -102,10 +95,9 @@
       display: flex;
       right: 0;
       top: 0;
-      
 
       .ribbon-left {
-         right: 9em;
+         right: 7em;
          position: absolute;
       }
 
@@ -117,7 +109,7 @@
          border-left: 1px solid #ccc;
          width: 12em;
          position: absolute;
-         right: 6em;
+         right: 5em;
          z-index: 0;
       }
 
@@ -125,7 +117,7 @@
          background-color: $THEME_GREY;
          display: inline-block;
          position: absolute;
-         width: 9em;
+         width: 7em;
          right: 0;
       }
 
@@ -133,7 +125,7 @@
          display: inline-block;
          height: 100%;
          padding: 0 auto;
-         width: 6em;
+         width: 5em;
          border-left: 1px solid #ccc;
          right: 0;
          position: absolute;
@@ -148,14 +140,15 @@
             /* plus */
             content: "\002b";
          }
-         
       }
    }
-   
-   .add-course:hover .c-button {
-      background-color: $THEME_BLUE;
-      border-left-color: transparent;
-      color: white;
+      
+   .add-course:hover {
+      .c-button {
+         background-color: $THEME_BLUE;
+         border-left-color: transparent;
+         color: white;
+      }
    }
 
    .add-course:hover + .expand-bar {
@@ -173,6 +166,9 @@
 }
 
 .home-course-entry.added {
+   .add-course {
+      opacity: 0.5;
+   }
    .c-button {
       background-color: $THEME_GREEN;
       color: white;
@@ -181,22 +177,21 @@
          content: "\e013"; 
       }
    }
-   .add-course:hover .c-button {
-      background-color: $THEME_BLUE;
-      border-left-color: transparent;
-      color: white;
-      .icon:after {
-         /* remove */
-         content: "\e014"; 
+   .add-course:hover {
+      opacity: 0.9;
+      transition: 0.4s;
+      .c-button {
+         background-color: $THEME_RED;
+         border-left-color: transparent;
+         color: white;
+         .icon:after {
+            /* remove */
+            content: "\e014"; 
+         }
       }
    }
 }
 
-
-.home-course-entry.added .add-course:hover .c-button {
-   background-color: $THEME_RED;
-}
-
 .home-course-entry.expanded .head .expand-bar {
-   background-color: inherit;   
+   background-color: #eee;   
 }
