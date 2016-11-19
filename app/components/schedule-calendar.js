@@ -8,9 +8,9 @@ export default Ember.Component.extend({
                R.xprod(R.range(8,23), R.map(R.multiply(10),R.range(0,6)))),
    days: ['', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri'],
    didRender() {
-      var h = $('#schedule-calendar').innerWidth(); // 10% of container width
+      var h = $('.schedule-calendar').innerWidth(); // 10% of container width
       console.log(h);
-      $('#schedule-calendar').css('font-size', h * 0.015 + 'px');
+      $('.schedule-calendar').css('font-size', h * 0.015 + 'px');
       renderOneCourse(course);
       renderOneCourse(course2);
    }
@@ -38,7 +38,7 @@ var course2 = {
 }
 
 function renderOneCourse(course) {
-   var cal = $('#schedule-calendar');
+   var cal = $('.schedule-calendar');
    var baseFontSize = parseInt(cal.css('font-size'));
    var startBlock = cal.find(S.sprintf('.%s.%s.%02s', course.day, course.from.h, roundMin(course.from.m)));
    var endBlock = cal.find(S.sprintf('.%s.%s.%02s', course.day, course.to.h, roundMin(course.to.m)));
@@ -78,7 +78,6 @@ function renderOneCourse(course) {
    courseDOM.css({
       height: drawH,
       width: drawW,
-      backgroundColor: 'red',
       position: 'absolute',
       zIndex: 999,
       top: drawT,

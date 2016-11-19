@@ -44,7 +44,11 @@ export default Ember.Controller.extend({
    searchClicked: false,
    addFirstCourse: true,
    state: 0,
-   expandedEntry: 0
+   expandedEntry: 0,
+   schedules: R.repeat({
+         key: 1,
+         courses: [course, course2]
+      }, 10)
 });
 
 function key(a) {
@@ -53,4 +57,26 @@ function key(a) {
 
 function keyEq(a,b) {
    return a.key == b.key;
+}
+
+
+var course = {
+   day: 'Mon',
+   from: {h:8,m:0},
+   to: {h:10,m:0},
+   id: 1,
+   category: 'econ',
+   instructor: 'me',
+   number: 101,
+   title: 'xx'
+}
+var course2 = {
+   day: 'Tue',
+   from: {h:8,m:0},
+   to: {h:9,m:0},
+   id: 2,
+   category: 'econ',
+   instructor: 'me',
+   number: 101,
+   title: 'xx'
 }

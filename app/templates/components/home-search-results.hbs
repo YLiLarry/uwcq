@@ -3,10 +3,13 @@
 <h4>Discovery</h4>
 {{message}}
 <hr/>
-   <div><a class="thumbnail"><img size="5em" src="" alt="plan"/></a></div>
-   <div><a class="thumbnail"><img size="5em" src="" alt="plan"/></a></div>
-   <div><a class="thumbnail"><img size="5em" src="" alt="plan"/></a></div>
-   <div><a class="thumbnail"><img size="5em" src="" alt="plan"/></a></div>
+   {{#each results as |r|}}
+   <div>
+      <div class="thumbnail">
+         {{component 'schedule-calendar' schedule=r}}
+      </div>
+   </div>
+   {{/each}}
 </div>
 
 </div>

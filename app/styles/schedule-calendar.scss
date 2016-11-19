@@ -1,10 +1,10 @@
 @import 'globals';
 
-#schedule-calendar {
+.schedule-calendar {
    
    background-color: white;
-   height: 50vw;
-   width: 100vw;
+   height: 100%;
+   width: 100%;
    position: relative;
    
    .convas {
@@ -17,10 +17,11 @@
             font-weight: light;
          }
          text-align: center;
+         background-color: $THEME_GREEN;
       }
    }
    
-   #grid {
+   .grid {
       height: 100%;
       width: 100%;
       
@@ -33,11 +34,11 @@
          font-size: inherit;
       }
       
-      #g-body {
+      .g-body {
          height: 100%;
       }
       
-      #g-body .g-row {
+      .g-body .g-row {
          display: flex;
          height: 1.06%;
       }
@@ -73,7 +74,7 @@
          }
       }
       
-      #g-head {
+      .g-head {
          display: flex;
          height: auto;
          .g-cell {

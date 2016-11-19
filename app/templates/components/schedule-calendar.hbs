@@ -1,11 +1,11 @@
-<div id="schedule-calendar">
-<div id="grid">
-   <div id="g-head" class="g-row">
+<div class="schedule-calendar">
+<div class="grid">
+   <div class="g-head g-row">
    {{#each days as |d|}}
       <div class="g-cell">{{d}}</div>
    {{/each}}
    </div>
-   <div id="g-body">
+   <div class="g-body">
    {{#each time as |t|}}
       
       <div class="g-row {{if t.hr 'g-hr'}}">

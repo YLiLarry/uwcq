@@ -11,4 +11,9 @@
 
 .thumbnail {
    height: 15vh;
+   overflow: hidden;
+   .ember-view {
+      height: 100%;
+      width: 100%;
+   }
 }
