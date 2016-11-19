@@ -1,0 +1,23 @@
+<div id="schedule-calendar">
+<div id="grid">
+   <div id="g-head" class="g-row">
+   {{#each days as |d|}}
+      <div class="g-cell">{{d}}</div>
+   {{/each}}
+   </div>
+   <div id="g-body">
+   {{#each time as |t|}}
+      
+      <div class="g-row {{if t.hr 'g-hr'}}">
+      {{#each days as |d|}}
+         <div class="g-cell {{d}} {{t.h}} {{t.m}} {{if t.vr 'vr'}}">
+            <span class="g-label">{{t.h}}:{{t.m}}</span>
+         </div>
+      {{/each}}
+      </div>
+   {{/each}}
+   </div>
+</div>
+<div class="convas"></div>
+</div>
+

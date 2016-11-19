@@ -1,0 +1,86 @@
+@import 'globals';
+
+#schedule-calendar {
+   
+   background-color: white;
+   height: 50vw;
+   width: 100vw;
+   position: relative;
+   
+   .convas {
+      .course {
+         .title {
+            text-transform: uppercase;
+            font-weight: bold;
+         }
+         .time {
+            font-weight: light;
+         }
+         text-align: center;
+      }
+   }
+   
+   #grid {
+      height: 100%;
+      width: 100%;
+      
+      * {
+         padding: 0;
+         margin: 0;
+         border: none;       
+         color: black;
+         background-color: transparent;  
+         font-size: inherit;
+      }
+      
+      #g-body {
+         height: 100%;
+      }
+      
+      #g-body .g-row {
+         display: flex;
+         height: 1.06%;
+      }
+      
+      .g-hr .g-cell:first-child {
+         .g-label {
+            visibility: visible;
+            font-size: 90%;
+            font-weight: 200;
+            position: relative;
+            top: -0.6em;  
+            float: right;
+            margin: 0 0.5em;
+         }
+      }
+      
+      .g-label {
+         visibility: hidden;
+      }
+      
+      .g-hr .g-cell {
+         border-top: 1px solid black;
+      }
+      
+      .g-cell {
+         border-left: 1px solid black;
+         width: 19%;
+         display: inline-block;
+         &:first-child {
+            border: none;
+            width: 5%;
+            /*width: auto;*/
+         }
+      }
+      
+      #g-head {
+         display: flex;
+         height: auto;
+         .g-cell {
+            border: none;
+            text-align: center;
+            font-size: 100%;
+         }
+      }
+   }
+}
