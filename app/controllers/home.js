@@ -5,29 +5,52 @@ export default Ember.Controller.extend({
       onSearch: function() {
          console.log("onSearch");
       },
-      onAddCourse: function() {
-         if (this.get('addFirstCourse')) {
-            this.set('addFirstCourse', false);
-            $("#home-body-right").animate({
-               left: "25vw",
-               width: "75vw"
-            });
-            $("#home-body-left").animate({
-               left: "0"
-            });
-         }
+      onAddCourse: function(key) {
+         this.set('state', 2);
+         var selected = R.find((obj)=>(obj.key == key), this.get('courses'));
+         console.log('add course', key, selected);
+         this.set('added', R.unionWith(keyEq, this.added, [selected]));
+      },
+      onRemoveCourse: function(key) {
+         var idx = R.findIndex((obj)=>(obj.key == key), this.get('added'));
+         var removed = this.get('added')[idx];
+         this.set('added', R.remove(idx));
       },
       onSearchClicked: function() {
          this.set("searchClicked", true);
-         this.set("state", 2);
+         this.set("state", 1);
       },
-      onExpand: function(id) {
-         this.set('expanedEntry', id);
+      onExpand: function(key) {
+         this.set('expandedEntry', key);
       }
    },
-   courses: R.map((id) => ({id:id}),R.range(0,10)),
+   didRender: function() {
+      console.log(this);
+      this._super(...arguments);
+   },
+   added: [],
+   courses: Ember.computed('added', function() {
+      var all = R.map((key)=>({
+         key:key,
+         name: "ECON" ,
+         number: "101",
+         title: "Introduction to Micro economics"
+      }), R.range(1,20));
+      var rmed = R.differenceWith(keyEq, all, this.added);
+      var newls = R.concat(this.added, rmed);
+      console.log(R.map(key, newls));
+      return newls;
+   }),
    searchClicked: false,
    addFirstCourse: true,
-   state: 1,
-   expanedEntry: 0
+   state: 0,
+   expandedEntry: 0
 });
+
+function key(a) {
+   return a.key;
+}
+
+function keyEq(a,b) {
+   return a.key == b.key;
+}

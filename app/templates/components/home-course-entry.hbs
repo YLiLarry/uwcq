@@ -1,21 +1,29 @@
-<div class="home-course-entry {{if expanded 'expanded' ''}}">
+<div id={{course.key}} 
+     class="home-course-entry 
+            {{if expanded 'expanded'}} 
+            {{if course.added 'added'}}">
    <div class="head">
       <div class="add-course clickable" onClick={{action 'onAddCourse'}}>
          <div class="hint">
             <div class="ribbon-left"></div>
-            <div class="text">Take this course</div>
+            <div class="text">
+               {{if course.added 'Drop' 'Take'}} course
+            </div>
          </div>
-         <div class="plus-button"><i class="glyphicon glyphicon-plus"></i></div>
+         <div class="c-button">
+            <span class="glyphicon"><span class="icon"></span></span>
+         </div>
       </div>
       <div class="expand-bar clickable" onClick={{action "expand"}}>
          <i class="glyphicon glyphicon-chevron-{{if expanded 'up' 'down'}}"></i>
-         <span class="name">{{id}}</span>
-         <span class="name">{{courseName}}</span>
-         <span class="number">{{courseNum}}:</span> 
-         <span class="title">{{courseTitle}}</span>
+         <span class="name">{{course.key}}</span>
+         <span class="name">{{course.name}}</span>
+         <span class="number">{{course.number}}:</span> 
+         <span class="title">{{course.title}}</span>
       </div>
    </div>
-   <div class="body">
+   <div class="body watch-transition">
+   <div class="margin">
       <table class="table">
          <thead>
             <tr>
@@ -49,5 +57,6 @@
             </tr>
          </tbody>
       </table>
+   </div>
    </div>
 </div>

@@ -1,5 +1,6 @@
 @import "globals";
 @import "home-course-entry";
+@import "home-search-results";
 
 
 body {
@@ -8,42 +9,132 @@ body {
    font-family: "Helvetica Neue";
 }
 
-#home-searchbar {
-   position: relative;
-   transition: 0.7s;
-   margin: 0 auto;
+#home-body {
+   margin: 0;
+   padding: 0;
+   background-image: url("../images/waterloo_sign.png");
+   background-attachment: fixed;
+   background-size: cover;
+   overflow: scroll;
+   position: absolute;
+   top: 3em;
+   bottom: 0;
+   left: 0;
+   right: 0;
 }
 
-#home-searchbar input {
-   opacity: 0.9;
+.state-0 {
+   
+   #home-search {
+      position: absolute;
+      right: 0;
+      width: 100vw;
+   }
+   
+   #home-searchbar {
+      position: relative;
+      transition: 0.7s;
+      width: 100%;
+      right: 0;
+      input {
+         opacity: 0.9;
+      }
+      input:focus {
+         opacity: 1;
+      }
+      #input {
+         transition: 0.7s;
+         margin: calc(40vh - 3em) 10vw 0 10vw; 
+         position: relative;   
+      }
+   }
+
+   #home-search-results {
+      width: 25vw;
+      position: absolute;
+      left: -25vw;
+      margin: 3em 0; 
+   }
+   
+   #home-course-entries {
+      max-height: 0;
+      overflow: scroll;
+   }
+
+
+   #home-search-filters {
+      height: 100px;
+      margin: 1em;
+   }
+
 }
 
-#home-searchbar input:focus {
-   opacity: 1;
+.state-1 {
+      
+   #home-search {
+      width: 100vw;
+      position: absolute;
+      right: 0;
+      transition: 0.7s;
+   }
+   
+   #home-searchbar #input {
+      transition: 0.7s;
+      position: relative;
+      margin: 3em 3em 2em 3em; 
+   }
+
+   #home-course-entries {
+      transition: 0.7s;
+      width: 100%;
+      max-height: 100vh;
+      transition: 0.7s;
+      transition-delay: 0.7s;
+      overflow: hidden;
+   }
+   
+   #home-course-entries.after-transition {
+      max-height: none;
+      overflow: visible;
+   }
+   
+   #home-search-results {
+      width: 25vw;
+      position: absolute;
+      margin: 3em 0; 
+      left: -25vw;
+   }
 }
 
-.state-1 #home-searchbar {
-   margin: 3em 10em; 
-   margin-top: calc(40vh - 3em);
+
+.state-2 {
+   
+   #home-search {
+      width: 75vw;
+      position: absolute;
+      right: 0;
+      transition: 0.7s;
+   }
+   
+   #home-search-entries {
+      width: 100%;
+      max-height: 100vh;
+   }
+   
+   #home-searchbar #input {
+      position: relative;
+      margin: 3em 3em 2em 3em; 
+   }
+
+   #home-search-results {
+      left: 0;
+      position: absolute;
+      margin: 3em 1.5em; 
+      width: 25vw;
+      transition: 0.7s;
+   }  
 }
 
-.state-2 #home-searchbar {
-   margin: 3em 3em 2em 3em; 
-}
-
-#home-course-entries {
-   transition: 0.7s;
-   transition-delay: 0.7s;
-   overflow: hidden;
-}
-
-.state-1 #home-course-entries {
-   height: 0;
-}
-
-.state-2 #home-course-entries {
-   height: 80vh;
-}
 
 .has-feedback-left input.form-control {
   padding-left: 40px; 
@@ -82,35 +173,6 @@ body {
    user-select: none;
 }
 
-#home-search-filters {
-   height: 100px;
-   margin: 1em;
-}
-
-#home-body {
-   width: 100vw;
-   height: calc(100vh - 3em);
-   margin: 0;
-   padding: 0;
-   background-image: url("../images/waterloo_sign.png");
-   background-attachment: fixed;
-   background-size: cover;
-   overflow: scroll;
-   position: absolute;
-}
-
-#home-body-left {
-   width: 25vw;
-   position: absolute;
-   left: -25vw;
-   display: inline-block;
-   overflow: hidden;
-}
-#home-body-right {
-   width: 100vw;
-   position: absolute;
-   display: inline-block;
-}
 
 .ribbon-left {
    border-top:1.8em solid $THEME_GREY;

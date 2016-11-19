@@ -1,25 +1,18 @@
-{{{expandedEntry}}}
 {{component 'home-head'}}
 <div id="home-body" class="state-{{state}}">
-   <div id="home-body-left">
-   {{component 'home-search-filters'}}
    {{component 'home-search-results'}}
-   </div><div id="home-body-right">
-   {{component 'home-searchbar' 
-      onSearch=(action "onSearch")
-      onSearchClicked=(action "onSearchClicked")}}
-   <div id="home-course-entries">
-   {{#each courses as |c|}}
-      {{component 'home-course-entry' 
-         id=c.id
-         courseName="ECON" 
-         courseNum="101" 
-         courseTitle="Introduction to Micro economics"
-         onAddCourse=(action "onAddCourse")
-         expandedEntry=expandedEntry
-         getParent=get
-         setParent=set}}
-   {{/each}}
-   </div>
+   <div id="home-search">
+      {{component 'home-searchbar' 
+         onSearch=(action "onSearch")
+         onSearchClicked=(action "onSearchClicked")}}
+      <div id="home-course-entries" class="watch-transition">
+      {{#each courses as |c|}}
+         {{component 'home-course-entry' 
+            course=c
+            onAddCourse=(action "onAddCourse")
+            onRemoveCourse=(action "onRemoveCourse")
+            expandedEntry=expandedEntry}}
+      {{/each}}
+      </div>
    </div>
 </div>
