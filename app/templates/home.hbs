@@ -1,6 +1,6 @@
 {{component 'home-head'}}
 <div id="home-body" class="state-{{state}}">
-   {{component 'home-search-results' results=schedules}}
+   {{component 'home-search-results' schedules=schedules}}
    <div id="home-search">
       {{component 'home-searchbar' 
          onSearch=(action "onSearch")

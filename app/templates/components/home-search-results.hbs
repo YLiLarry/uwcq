@@ -3,13 +3,16 @@
 <h4>Discovery</h4>
 {{message}}
 <hr/>
-   {{#each results as |r|}}
-   <div>
-      <div class="thumbnail">
+   {{#each schedules as |r|}}
+   <div class="thumbnail">
+      {{#if r.visible}}
          {{component 'schedule-calendar' schedule=r}}
-      </div>
+      {{/if}}
    </div>
    {{/each}}
+   {{#if more}}
+      <div class="more">{{more}} MORE</div>
+   {{/if}}
 </div>
 
 </div>

@@ -7,38 +7,41 @@ export default Ember.Component.extend({
                       hr : t[1] == 0}), 
                R.xprod(R.range(8,23), R.map(R.multiply(10),R.range(0,6)))),
    days: ['', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri'],
+   willRender() {
+      console.log("schedule-calendar willRender");
+   },
    didRender() {
-      var h = $('.schedule-calendar').innerWidth(); // 10% of container width
-      console.log(h);
-      $('.schedule-calendar').css('font-size', h * 0.015 + 'px');
-      renderOneCourse(course);
-      renderOneCourse(course2);
+      console.log("schedule-calendar didRender");
+      
+      var self = this;
+      
+      var cal = $('.schedule-calendar.' + this.get('schedule.key'));
+      var h = cal.innerWidth(); // 10% of container width
+      cal.css('font-size', h * 0.015 + 'px');
+      
+      renderCourses(self.get('schedule'), cal);
    }
 });
 
-var course = {
-   day: 'Mon',
-   from: {h:8,m:0},
-   to: {h:10,m:0},
-   id: 1,
-   category: 'econ',
-   instructor: 'me',
-   number: 101,
-   title: 'xx'
-}
-var course2 = {
-   day: 'Tue',
-   from: {h:8,m:0},
-   to: {h:9,m:0},
-   id: 2,
-   category: 'econ',
-   instructor: 'me',
-   number: 101,
-   title: 'xx'
+function renderCourses(schedule, cal) {
+   var startT = new Date();
+   console.log("rander cal", schedule.key);
+   console.log(schedule);
+   schedule.courses.forEach((c)=>{renderOneCourse(c,cal)});
+   // html2canvas(cal, {
+   //    onrendered: function(convas) {
+   //       $(convas).css({
+   //          height: '100%',
+   //          width: '100%'
+   //       });
+   //       cal.html(convas);
+   //    }
+   // });
+   var endT = new Date();
+   console.log("rander cal ends", schedule.key, endT - startT);
 }
 
-function renderOneCourse(course) {
-   var cal = $('.schedule-calendar');
+function renderOneCourse(course, cal) {
    var baseFontSize = parseInt(cal.css('font-size'));
    var startBlock = cal.find(S.sprintf('.%s.%s.%02s', course.day, course.from.h, roundMin(course.from.m)));
    var endBlock = cal.find(S.sprintf('.%s.%s.%02s', course.day, course.to.h, roundMin(course.to.m)));
@@ -59,8 +62,6 @@ function renderOneCourse(course) {
    var courseTitleDOM = $(courseTextDOM[0]);
    var courseInstrDOM = $(courseTextDOM[1]);
    var courseTimeDOM = $(courseTextDOM[2]);
-   
-   console.log(courseDOM, fontSize)
    
    if (fontSize < 10) {
       fontSize = Math.min(drawH * 0.3, baseFontSize * 0.8);

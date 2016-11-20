@@ -3,17 +3,36 @@
 #home-search-results {
    border-radius: 4px;
    background-color: rgba(255,255,255,0.9);   
-}
-
-#home-search-results .margin {
-   margin: 2em;
-}
-
-.thumbnail {
-   height: 15vh;
-   overflow: hidden;
-   .ember-view {
-      height: 100%;
-      width: 100%;
+   .margin {
+      margin: 2em;
    }
+   
+   cursor: default;
+   
+   .thumbnail {
+      height: 10vh;
+      overflow: hidden;
+      .ember-view {
+         height: 100%;
+         width: 100%;
+      }
+      cursor: pointer;
+      &:hover {
+         border-color: $THEME_BLUE;
+      }
+   }
+
+   .more {
+      font-weight: bold;
+      font-size: 0.8em;
+      text-align: right;
+      color: $THEME_GREY;
+      opacity: 0.3;
+   }
+   
+   .more:hover {
+      /*opacity: 0.7;*/
+   }
+
 }
+

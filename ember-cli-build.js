@@ -43,5 +43,11 @@ module.exports = function(defaults) {
   // ramda
   app.import('bower_components/ramda/dist/ramda.min.js');
   
+  // html2canvas
+  app.import('bower_components/html2canvas/dist/html2canvas.min.js');
+  
+  // jquery-visible
+  app.import('bower_components/df-visible/jquery.visible.min.js');
+  
   return app.toTree();
 };

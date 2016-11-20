@@ -85,6 +85,9 @@ $HOME_WL: 20vw;
       transition: 0.7s;
       position: relative;
       margin: 3em 3em 2em 3em; 
+      input {
+         opacity: 1;
+      }
    }
 
    #home-course-entries {
@@ -117,6 +120,13 @@ $HOME_WL: 20vw;
       position: absolute;
       right: 0;
       transition: 0.7s;
+      
+      input {
+         opacity: 0.97;
+      }
+      input:focus {
+         opacity: 1;
+      }
    }
    
    #home-search-entries {
@@ -152,7 +162,8 @@ $HOME_WL: 20vw;
    padding: 0.7em 1em;
    height: 3em;
    background-color: $THEME_BLACK;
-      
+   cursor: default;
+   
    .uw {
       color: $THEME_BLUE_L; 
       font-size: 1.2em;

@@ -21,6 +21,11 @@
       }
    }
    
+   convas {
+      height: 100%;
+      width: 100%;
+   }
+   
    .grid {
       height: 100%;
       width: 100%;
@@ -70,7 +75,6 @@
          &:first-child {
             border: none;
             width: 5%;
-            /*width: auto;*/
          }
       }
       
