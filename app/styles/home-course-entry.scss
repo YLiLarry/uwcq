@@ -95,7 +95,13 @@
       display: flex;
       right: 0;
       top: 0;
+      opacity: 0.7;
 
+      &:hover {
+         opacity: 0.9;
+         /*transition: 0.2s;*/
+      }
+      
       .ribbon-left {
          right: 7em;
          position: absolute;
@@ -166,9 +172,6 @@
 }
 
 .home-course-entry.added {
-   .add-course {
-      opacity: 0.5;
-   }
    .c-button {
       background-color: $THEME_GREEN;
       color: white;
@@ -178,8 +181,6 @@
       }
    }
    .add-course:hover {
-      opacity: 0.9;
-      transition: 0.4s;
       .c-button {
          background-color: $THEME_RED;
          border-left-color: transparent;

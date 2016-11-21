@@ -62,11 +62,15 @@ export default Ember.Controller.extend({
    addFirstCourse: true,
    state: 0,
    expandedEntry: 0,
-   schedules: R.map((key) => (Ember.Object.create({
-      key: key,
-      visible: false,
-      courses: [course, course2]
-   })), R.range(1,6))
+   schedules: R.map((key) => {
+         var arr = [course, course2];
+         return Ember.Object.create({
+                  key: key,
+                  visible: false,
+                  courses: arr,
+                  serialized: encodeURIComponent(JSON.stringify(arr))
+               });
+      }, R.range(1,6))
 });
 
 function key(a) {
