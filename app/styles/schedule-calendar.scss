@@ -2,7 +2,6 @@
 
 .schedule-calendar {
    
-   background-color: white;
    height: 100%;
    width: 100%;
    position: relative;
@@ -17,7 +16,7 @@
             font-weight: light;
          }
          text-align: center;
-         background-color: $THEME_GREEN;
+         background-color: $THEME_GREEN_L;
       }
    }
    
@@ -41,22 +40,29 @@
       
       .g-body {
          height: 100%;
+         .g-row {
+            display: flex;
+            height: 1.06%;
+            &:last-child {
+               .g-cell {
+                  border-right: 1px solid transparent;
+               }
+            }
+         }
+         
       }
       
-      .g-body .g-row {
-         display: flex;
-         height: 1.06%;
-      }
-      
+      /* Time labels */
       .g-hr .g-cell:first-child {
          .g-label {
             visibility: visible;
-            font-size: 90%;
+            font-size: 80%;
             font-weight: 200;
             position: relative;
             top: -0.6em;  
             float: right;
             margin: 0 0.5em;
+            color: #777;
          }
       }
       
@@ -65,16 +71,16 @@
       }
       
       .g-hr .g-cell {
-         border-top: 1px solid black;
+         border-top: 1px solid #ccc;
       }
       
       .g-cell {
-         border-left: 1px solid black;
+         border-right: 1px solid #ccc;
          width: 19%;
          display: inline-block;
          &:first-child {
-            border: none;
             width: 5%;
+            border-top: none;
          }
       }
       
@@ -85,6 +91,7 @@
             border: none;
             text-align: center;
             font-size: 100%;
+            color: #777;
          }
       }
    }

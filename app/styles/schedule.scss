@@ -1,0 +1,27 @@
+@import "globals";
+
+#route-schedule {
+   
+   background-image: url("../images/waterloo_sign.png");
+   background-attachment: fixed;
+   background-size: cover;
+   overflow: hidden;
+   
+   position: absolute;
+   overflow: scroll;
+   top: $HOME_HEAD_H;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   
+   .schedule-calendar {
+      margin: 1em auto;
+      width: calc(100vw - 3em);
+      height: 80vh;
+      max-height: 100vh;
+      background-color: $THEME_TRANS_BK_F;
+      padding: 1em 1.5em 1.25em 0.5em;
+      border-radius: 2px;
+   }
+   
+}

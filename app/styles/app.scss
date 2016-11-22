@@ -1,6 +1,7 @@
 @import "globals";
 @import "home-course-entry";
 @import "home-search-results";
+@import "schedule";
 @import "schedule-calendar";
 
 
@@ -20,7 +21,7 @@ $HOME_WL: 20vw;
    background-size: cover;
    overflow: scroll;
    position: absolute;
-   top: 3em;
+   top: $HOME_HEAD_H;
    bottom: 0;
    left: 0;
    right: 0;

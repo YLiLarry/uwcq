@@ -66,7 +66,7 @@ export default Ember.Controller.extend({
          var arr = [course, course2];
          return Ember.Object.create({
                   key: key,
-                  visible: false,
+                  visible: true,
                   courses: arr,
                   serialized: encodeURIComponent(JSON.stringify(arr))
                });

@@ -2,10 +2,14 @@ import Ember from 'ember';
 import S from 'npm:sprintf-js'
 
 export default Ember.Component.extend({
-   time: R.map((t)=>({h : t[0], 
-                      m : S.sprintf('%02d',t[1]), 
-                      hr : t[1] == 0}), 
-               R.xprod(R.range(8,23), R.map(R.multiply(10),R.range(0,6)))),
+   time: Ember.computed(function() {
+      var arr = R.map((t)=>({h : t[0], 
+                             m : S.sprintf('%02d',t[1]), 
+                             hr : t[1] == 0}), 
+                  R.xprod(R.range(8,23), R.map(R.multiply(10),R.range(0,6))));
+      arr.push({h: '23', m:'00', hr: true});
+      return arr;
+   }),
    days: ['', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri'],
    willRender() {
       console.log("schedule-calendar willRender");
@@ -16,10 +20,20 @@ export default Ember.Component.extend({
       var self = this;
       
       var cal = $('.schedule-calendar.' + this.get('schedule.key'));
-      var h = cal.innerWidth(); // 10% of container width
-      cal.css('font-size', h * 0.015 + 'px');
       
-      renderCourses(self.get('schedule'), cal);
+      function renderCal() {
+         var w = cal.width();
+         cal.css({
+            fontSize: w * 0.015 + 'px'
+         })
+         renderCourses(self.get('schedule'), cal);
+      }
+      renderCal();
+      $(window).resize(renderCal);
+      
+      // renderCal();
+      
+      
    }
 });
 
@@ -27,6 +41,8 @@ function renderCourses(schedule, cal) {
    var startT = new Date();
    console.log("rander cal", schedule.key);
    console.log(schedule);
+   
+   cal.children('.convas').html("");
    schedule.courses.forEach((c)=>{renderOneCourse(c,cal)});
    // html2canvas(cal, {
    //    onrendered: function(convas) {
@@ -45,7 +61,7 @@ function renderOneCourse(course, cal) {
    var baseFontSize = parseInt(cal.css('font-size'));
    var startBlock = cal.find(S.sprintf('.%s.%s.%02s', course.day, course.from.h, roundMin(course.from.m)));
    var endBlock = cal.find(S.sprintf('.%s.%s.%02s', course.day, course.to.h, roundMin(course.to.m)));
-   var drawL = startBlock.position().left + 1;
+   var drawL = startBlock.position().left;
    var drawT = startBlock.position().top;
    var drawW = startBlock.width();
    var drawH = endBlock.position().top - drawT;
