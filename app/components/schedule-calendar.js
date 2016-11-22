@@ -92,12 +92,13 @@ function renderOneCourse(course, cal) {
    endBlock.css('background-color: green');
    var convas = cal.children('.convas');
    var courseDOM = $($.parseHTML(S.sprintf('<div class="course %s"></div>', course.id))[0]);
-   var courseTextDOM = $.parseHTML(S.sprintf('<div class="title">%s %s %s</div><div class="instructor">%s</div><div class="time">%d:%02d - %d:%02d</div>', 
+   var courseTextDOM = $.parseHTML(S.sprintf('<div class="textbox"><div class="title">%s %s %s</div><div class="instructor">%s</div><div class="time">%d:%02d - %d:%02d</div></div>', 
                                  course.category, course.number, course.title, course.instructor, course.from.h, course.from.m, course.to.h, course.to.m));
    
-   var courseTitleDOM = $(courseTextDOM[0]);
-   var courseInstrDOM = $(courseTextDOM[1]);
-   var courseTimeDOM = $(courseTextDOM[2]);
+   var textboxDOM = $(courseTextDOM[0]);
+   var courseTitleDOM = textboxDOM.children('.title');
+   var courseInstrDOM = textboxDOM.children('.instructor');
+   var courseTimeDOM = textboxDOM.children('.time');
    
    courseDOM.append($(courseTextDOM));
    convas.append(courseDOM);
@@ -111,58 +112,62 @@ function renderOneCourse(course, cal) {
       left: drawL,
    });
    
+   textboxDOM.css({
+      position: 'relative',
+      height: 'auto'
+   })
    
    courseTitleDOM.css({
-      position: 'relative',
-      marginTop: courseDOM.height() * 0.1,
-      marginBottom: courseDOM.height() * 0.1,
-      marginLeft: courseDOM.width() * 0.05,
-      marginRight: courseDOM.width() * 0.05,
+      paddingTop: courseDOM.height() * 0.1,
+      paddingBottom: courseDOM.height() * 0.1,
+      paddingLeft: courseDOM.width() * 0.05,
+      paddingRight: courseDOM.width() * 0.05,
    });  
    courseInstrDOM.css({
-      position: 'relative',
-      marginBottom: courseDOM.height() * 0.1,
-      marginLeft: courseDOM.width() * 0.05,
-      marginRight: courseDOM.width() * 0.05,
+      paddingBottom: courseDOM.height() * 0.1,
+      paddingLeft: courseDOM.width() * 0.05,
+      paddingRight: courseDOM.width() * 0.05,
    });
    courseTimeDOM.css({
-      position: 'relative',
-      marginLeft: courseDOM.width() * 0.05,
-      marginRight: courseDOM.width() * 0.05,
-      marginBottom: courseDOM.height() * 0.1,
+      paddingLeft: courseDOM.width() * 0.05,
+      paddingRight: courseDOM.width() * 0.05,
+      paddingBottom: courseDOM.height() * 0.1,
    })
    
 
+   var attmpt = 0;
+   
    function textFit() {
-      var padT = courseDOM.css('padding-top');
-      var padB = courseDOM.css('padding-bottom');
-      var bh = courseDOM.height() - courseTitleDOM.outerHeight(true) - courseInstrDOM.outerHeight(true) - courseTimeDOM.outerHeight(true);
-      // var bw = courseDOM.width() - Math.max(courseTitleDOM.outerWidth(true), courseInstrDOM.outerWidth(true), courseTimeDOM.outerWidth(true));
-      // console.log('textFit', bw)
+      var bh = courseDOM.height() - textboxDOM.outerHeight(true);
       return bh > 0;
-            
    }
    
-   
    do {
-      if (fontSize < 12) {
-         courseDOM.css({
-            padding: 0            
-         });
-         courseTitleDOM.css({
-            position: 'relative',
-            wordWrap: 'break-word',
-            overflow: 'hidden',
-            margin: 0
-         });  
-         courseInstrDOM.css({
-            position: 'relative',
-            margin: 0
-         });
-         courseTimeDOM.css({
-            position: 'relative',
-            margin: 0
-         });
+      if (fontSize < 11) {
+         if (attmpt >= 0) {
+            courseDOM.css({
+               padding: 0,
+               wordWrap: 'break-word',            
+            });              
+            courseTimeDOM.css({fontSize: fontSize - 1 + 'px'});
+         } 
+         if (attmpt >= 1) {
+            courseInstrDOM.css({padding: 0});
+            courseTimeDOM.css({paddingTop: 0});
+         }
+         if (attmpt >= 2) {
+            courseTitleDOM.css({padding: 0});  
+            courseTimeDOM.css({padding: 0});
+         }
+         if (attmpt >= 3) {
+            courseInstrDOM.css({display: 'inline-block', padding: '0 3px'});  
+            courseTimeDOM.css({display: 'inline-block', padding: '0 3px'});  
+            textboxDOM.css({padding: '2px'});
+         }
+         if (attmpt <= 4) {
+            fontSize++;
+            attmpt++;
+         }    
       }
       courseDOM.css({
          fontSize: fontSize + 'px'
@@ -172,18 +177,13 @@ function renderOneCourse(course, cal) {
    
    var targetMid = courseDOM.height()/2;
    function mid() {
-      return courseTitleDOM.position().top + 
-               (courseTitleDOM.outerHeight(true) 
-                  + courseInstrDOM.outerHeight(true) 
-                  + courseTimeDOM.outerHeight(true)) / 2;
+      return textboxDOM.position().top + textboxDOM.outerHeight(true) / 2;
    }
    var i = 0;
    while (mid() < targetMid) {
-      console.log(targetMid, mid(), courseTitleDOM.position().top)
+      console.log(targetMid, mid(), textboxDOM.position().top)
       i += 1;
-      courseTitleDOM.css({top: i + 'px'});
-      courseInstrDOM.css({top: i + 'px'});
-      courseTimeDOM.css({top: i + 'px'});
+      textboxDOM.css({top: i + 'px'});
    }
 }
 

@@ -37,7 +37,12 @@
    .schedule-calendar {
       font-size: 2px;
       height: 100%;
+      opacity: 0.5;
    }
-
+   
+   .schedule-calendar:hover {
+      transition: 0.5s;
+      opacity: 1;
+   }
 }
 
