@@ -16,12 +16,15 @@
    
    .schedule-calendar {
       margin: 1em auto;
-      width: calc(100vw - 3em);
-      height: 80vh;
-      max-height: 100vh;
+      width: 98vw;
+      height: calc(100vh - 3em - #{$HOME_HEAD_H});
       background-color: $THEME_TRANS_BK_F;
-      padding: 1em 1.5em 1.25em 0.5em;
+      padding: 1em 1.5em 1.25em .5em;
       border-radius: 2px;
+      font-size: 0.9em;
+      .g-head {
+         font-size: 1.3em;
+      }
    }
    
 }

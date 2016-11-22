@@ -1,6 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+   actions: {
+      openSchedule(s) {
+         console.log('/schedule?courses='+s.serialized);
+         window.open('/schedule?courses='+s.serialized, '_blank');
+      }
+   },
    looking: false,
    found: 0,
    message: Ember.computed('looking', 'found', function() {

@@ -6,9 +6,9 @@ var course = {
    to: {h:10,m:0},
    id: 1,
    category: 'econ',
-   instructor: 'me',
+   instructor: 'MEMEMEMEM MEMEMEMEME',
    number: 101,
-   title: 'xx'
+   title: 'Introduction to Micro Economics'
 }
 var course2 = {
    day: 'Tue',
@@ -16,9 +16,9 @@ var course2 = {
    to: {h:9,m:0},
    id: 2,
    category: 'econ',
-   instructor: 'me',
+   instructor: 'MEMEMEMEM MEMEMEMEMEe',
    number: 101,
-   title: 'xx'
+   title: 'Introduction to Micro Economics'
 }
 
 

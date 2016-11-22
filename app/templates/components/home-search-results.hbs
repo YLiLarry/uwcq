@@ -4,11 +4,11 @@
 {{message}}
 <hr/>
    {{#each schedules as |r|}}
-   <a class="thumbnail" href="schedule?courses={{r.serialized}}" target="_blank">
+   <div class="thumbnail" onClick={{action 'openSchedule' r}}>
       {{#if r.visible}}
          {{component 'schedule-calendar' schedule=r}}
       {{/if}}
-   </a>
+   </div>
    {{/each}}
    {{#if more}}
       <div class="more">{{more}} MORE</div>

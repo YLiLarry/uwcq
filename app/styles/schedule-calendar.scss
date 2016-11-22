@@ -5,7 +5,7 @@
    height: 100%;
    width: 100%;
    position: relative;
-   
+      
    .convas {
       .course {
          .title {
@@ -35,7 +35,6 @@
          border: none;       
          color: black;
          background-color: transparent;  
-         font-size: inherit;
       }
       
       .g-body {
@@ -56,7 +55,6 @@
       .g-hr .g-cell:first-child {
          .g-label {
             visibility: visible;
-            font-size: 80%;
             font-weight: 200;
             position: relative;
             top: -0.6em;  
@@ -76,10 +74,10 @@
       
       .g-cell {
          border-right: 1px solid #ccc;
-         width: 19%;
+         /*width: 19%;*/
          display: inline-block;
          &:first-child {
-            width: 5%;
+            /*width: 5%;*/
             border-top: none;
          }
       }
@@ -90,7 +88,6 @@
          .g-cell {
             border: none;
             text-align: center;
-            font-size: 100%;
             color: #777;
          }
       }
