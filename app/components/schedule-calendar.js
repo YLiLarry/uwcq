@@ -19,7 +19,7 @@ export default Ember.Component.extend({
       
       var self = this;
       
-      var cal = $('.schedule-calendar.' + this.get('schedule.key'));
+      var cal = $('.schedule-calendar.' + this.get('schedule.id'));
       
       function renderCal() {
          renderCourses(self.get('schedule'), cal);
@@ -35,7 +35,7 @@ export default Ember.Component.extend({
 
 function renderCourses(schedule, cal) {
    var startT = new Date();
-   console.log("rander cal", schedule.key);
+   console.log("rander cal", schedule.id);
    console.log(schedule);
    
    cal.children('.convas').html("");
@@ -75,7 +75,7 @@ function renderCourses(schedule, cal) {
    //    }
    // });
    var endT = new Date();
-   console.log("rander cal ends", schedule.key, endT - startT);
+   console.log("rander cal ends", schedule.id, endT - startT);
 }
 
 function renderOneCourse(course, cal) {

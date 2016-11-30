@@ -1,4 +1,4 @@
-<div id={{course.key}} 
+<div id={{course.id}} 
      class="home-course-entry 
             {{if expanded 'expanded'}} 
             {{if course.added 'added'}}">
@@ -16,7 +16,7 @@
       </div>
       <div class="expand-bar clickable" onClick={{action "expand"}}>
          <i class="glyphicon glyphicon-chevron-{{if expanded 'up' 'down'}}"></i>
-         <span class="name">{{course.key}}</span>
+         <span class="name">{{course.id}}</span>
          <span class="name">{{course.name}}</span>
          <span class="number">{{course.number}}:</span> 
          <span class="title">{{course.title}}</span>

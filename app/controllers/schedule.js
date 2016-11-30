@@ -21,7 +21,7 @@ export default Ember.Controller.extend({
          return false;
       }
       return Ember.Object.create({
-         key: 1,
+         id: 1,
          visible: true,
          courses: obj
       })

@@ -3,28 +3,28 @@ import Ember from 'ember';
 export default Ember.Component.extend({
    actions: {
       expand: function() {
-         var exp = this.get('expandedEntry') != this.course.key;
+         var exp = this.get('expandedEntry') != this.course.id;
          if (exp) {
-            this.set('expandedEntry', this.course.key);
-            toggle(this.course.key, true);
+            this.set('expandedEntry', this.course.id);
+            toggle(this.course.id, true);
          } else {
             this.set('expandedEntry', 0);
-            toggle(this.course.key, false);
+            toggle(this.course.id, false);
          }
       },
       onAddCourse: function(event) {
-         this.onAddCourse(this.course.key);
+         this.onAddCourse(this.course.id);
          this.set('course.added', true);
       },
       onRemoveCourse: function() {
-         this.onRemoveCourse(this.course.key);
+         this.onRemoveCourse(this.course.id);
          this.set('course.added', false);
       }
    },
    expanded: Ember.computed('expandedEntry', function() {
-      var exp = this.expandedEntry == this.course.key;
+      var exp = this.expandedEntry == this.course.id;
       if (! exp) {
-         toggle(this.course.key, false);
+         toggle(this.course.id, false);
       }
       return exp;
    }),
@@ -32,8 +32,8 @@ export default Ember.Component.extend({
 });
 
 // toggle expand
-function toggle(key, expand) {
-   var body = $('.home-course-entry#'+key+' .body');
+function toggle(id, expand) {
+   var body = $('.home-course-entry#'+id+' .body');
    if (expand) {
       body.animate({
          height: body.children(".margin").outerHeight(true)

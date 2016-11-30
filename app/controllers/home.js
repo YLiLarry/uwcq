@@ -27,14 +27,14 @@ export default Ember.Controller.extend({
       onSearch: function() {
          console.log("onSearch");
       },
-      onAddCourse: function(key) {
+      onAddCourse: function(id) {
          this.set('state', 2);
-         var selected = R.find((obj)=>(obj.key == key), this.get('courses'));
-         console.log('add course', key, selected);
+         var selected = R.find((obj)=>(obj.id == id), this.get('courses'));
+         console.log('add course', id, selected);
          this.set('added', R.unionWith(keyEq, this.added, [selected]));
       },
-      onRemoveCourse: function(key) {
-         var idx = R.findIndex((obj)=>(obj.key == key), this.get('added'));
+      onRemoveCourse: function(id) {
+         var idx = R.findIndex((obj)=>(obj.id == id), this.get('added'));
          var removed = this.get('added')[idx];
          this.set('added', R.remove(idx));
       },
@@ -42,14 +42,14 @@ export default Ember.Controller.extend({
          this.set("searchClicked", true);
          this.set("state", 1);
       },
-      onExpand: function(key) {
-         this.set('expandedEntry', key);
+      onExpand: function(id) {
+         this.set('expandedEntry', id);
       }
    },
    added: [],
    courses: Ember.computed('added', function() {
-      var all = R.map((key)=>({
-         key:key,
+      var all = R.map((id)=>({
+         id:id,
          name: "ECON" ,
          number: "101",
          title: "Introduction to Micro economics"
@@ -62,10 +62,10 @@ export default Ember.Controller.extend({
    addFirstCourse: true,
    state: 0,
    expandedEntry: 0,
-   schedules: R.map((key) => {
+   schedules: R.map((id) => {
          var arr = [course, course2];
          return Ember.Object.create({
-                  key: key,
+                  id: id,
                   visible: true,
                   courses: arr,
                   serialized: encodeURIComponent(JSON.stringify(arr))
@@ -73,12 +73,12 @@ export default Ember.Controller.extend({
       }, R.range(1,6))
 });
 
-function key(a) {
-   return a.key;
+function id(a) {
+   return a.id;
 }
 
 function keyEq(a,b) {
-   return a.key == b.key;
+   return a.id == b.id;
 }
 
 
