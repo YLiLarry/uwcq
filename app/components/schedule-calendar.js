@@ -93,7 +93,7 @@ function renderOneCourse(course, cal) {
    var convas = cal.children('.convas');
    var courseDOM = $($.parseHTML(S.sprintf('<div class="course %s"></div>', course.id))[0]);
    var courseTextDOM = $.parseHTML(S.sprintf('<div class="textbox"><div class="title">%s %s %s</div><div class="instructor">%s</div><div class="time">%d:%02d - %d:%02d</div></div>', 
-                                 course.category, course.number, course.title, course.instructor, course.from.h, course.from.m, course.to.h, course.to.m));
+                                 course.catalog, course.number, course.title, course.instructor, course.from.h, course.from.m, course.to.h, course.to.m));
    
    var textboxDOM = $(courseTextDOM[0]);
    var courseTitleDOM = textboxDOM.children('.title');

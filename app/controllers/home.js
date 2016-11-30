@@ -5,7 +5,7 @@ var course = {
    from: {h:8,m:0},
    to: {h:10,m:0},
    id: 1,
-   category: 'econ',
+   catalog: 'econ',
    instructor: 'MEMEMEMEM MEMEMEMEME',
    number: 101,
    title: 'Introduction to Micro Economics'
@@ -15,7 +15,7 @@ var course2 = {
    from: {h:8,m:0},
    to: {h:9,m:0},
    id: 2,
-   category: 'econ',
+   catalog: 'econ',
    instructor: 'MEMEMEMEM MEMEMEMEMEe',
    number: 101,
    title: 'Introduction to Micro Economics'
@@ -50,7 +50,7 @@ export default Ember.Controller.extend({
    courses: Ember.computed('added', function() {
       var all = R.map((id)=>({
          id:id,
-         name: "ECON" ,
+         catalog: "ECON" ,
          number: "101",
          title: "Introduction to Micro economics"
       }), R.range(1,20));
