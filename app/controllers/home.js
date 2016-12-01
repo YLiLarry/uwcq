@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import S from 'npm:sprintf-js'
 
 var course = {
    day: 'Mon',
@@ -22,16 +23,46 @@ var course2 = {
 }
 
 
+function sortFilterWith(f, arr) {
+   var mapped = R.map((item) => [f(item), item], arr);
+   var filtered = R.filter((pair) => pair[0] > 0, mapped);
+   var sorted = R.sortBy((pair) => pair[0], filtered);
+   var unmapped = R.map((pair) => pair[1], sorted);  
+   return unmapped;    
+}
+console.assert(R.equals(sortFilterWith(R.identity, [3,2,1,-1]), [1,2,3]), 
+               sortFilterWith(R.identity, [3,2,1,-1]));
+
+
+function regexCountMatch(reg, str) {
+   return R.match(reg, str).length;
+}
+console.assert(regexCountMatch(/(a)/gi, 'abaa') == 3, 
+               R.match(/(a)/gi, 'abaa'));
+
+
 export default Ember.Controller.extend({
+   init: function() {
+      this._super();
+      var self = this;
+      this.get('store').findAll('course').then(function(all) {
+         self.set('allCourses', all);
+      });
+   },
    actions: {
       onSearch: function() {
-         console.log("onSearch");
+         console.log("onSearch", this.get('searchText'));
       },
-      onAddCourse: function(id) {
+      onAddCourse: function(course) {
          this.set('state', 2);
-         var selected = R.find((obj)=>(obj.id == id), this.get('courses'));
-         console.log('add course', id, selected);
-         this.set('added', R.unionWith(keyEq, this.added, [selected]));
+         var added = this.get('added');
+         if (! added) {
+            this.set('added', []);
+         }
+         this.get('added').pushObject(course);
+         // var newAdded = R.unionWith(idEq, added, [selected]);
+         // this.set('added', newAdded);
+         console.log('add course', course.id, this.get('added'));
       },
       onRemoveCourse: function(id) {
          var idx = R.findIndex((obj)=>(obj.id == id), this.get('added'));
@@ -46,17 +77,29 @@ export default Ember.Controller.extend({
          this.set('expandedEntry', id);
       }
    },
+   searchText: "",
    added: [],
-   courses: Ember.computed('added', function() {
-      var all = R.map((id)=>({
-         id:id,
-         subject: "ECON" ,
-         number: "101",
-         title: "Introduction to Micro economics"
-      }), R.range(1,20));
-      var rmed = R.differenceWith(keyEq, all, this.added);
-      var newls = R.concat(this.added, rmed);
-      return newls;
+   coursesDisplayedMax: 100,
+   coursesDisplayed: Ember.computed('added.length', 'allCourses', 'searchText', function() {
+      var all = this.get('allCourses');
+      if (! all) {return [];}
+      var regs = R.map((key) => new RegExp('\\b'+key, 'ig'), R.without([''], R.split(' ', this.get('searchText'))));
+      // var regex = new RegExp('\\b' + R.join('|\\b', R.without([''], R.split(' ', this.get('searchText')))), 'ig');
+      var searched = R.filter((course) => {
+         var context = R.join(' ', [   course.get('subject'), 
+                                       course.get('number'), 
+                                       course.get('subject') + course.get('number'), 
+                                       course.get('title')  ]);
+         return R.all((k) => R.test(k, context), regs);
+         // return regexCountMatch(regex, context);
+      }, all);
+      searched = R.reverse(searched);
+      console.log(regs, searched);
+      var displayed = searched.slice(0,this.get('coursesDisplayedMax'));
+      var added = this.get('added');
+      var rmed = R.differenceWith(idEq, displayed, added);
+      displayed = R.concat(added, rmed);
+      return displayed;
    }),
    searchClicked: false,
    addFirstCourse: true,
@@ -66,7 +109,7 @@ export default Ember.Controller.extend({
          var arr = [course, course2];
          return Ember.Object.create({
                   id: id,
-                  visible: true,
+                  visible: false,
                   courses: arr,
                   serialized: encodeURIComponent(JSON.stringify(arr))
                });
@@ -77,7 +120,7 @@ function id(a) {
    return a.id;
 }
 
-function keyEq(a,b) {
+function idEq(a,b) {
    return a.id == b.id;
 }
 

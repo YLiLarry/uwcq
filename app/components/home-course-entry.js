@@ -13,7 +13,7 @@ export default Ember.Component.extend({
          }
       },
       onAddCourse: function(event) {
-         this.onAddCourse(this.course.id);
+         this.onAddCourse(this.course);
          this.set('course.added', true);
       },
       onRemoveCourse: function() {

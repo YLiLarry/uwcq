@@ -3,10 +3,11 @@
    {{component 'home-search-results' schedules=schedules}}
    <div id="home-search">
       {{component 'home-searchbar' 
+         searchText=searchText
          onSearch=(action "onSearch")
          onSearchClicked=(action "onSearchClicked")}}
       <div id="home-course-entries" class="watch-transition">
-      {{#each courses as |c|}}
+      {{#each coursesDisplayed as |c|}}
          {{component 'home-course-entry' 
             course=c
             onAddCourse=(action "onAddCourse")
