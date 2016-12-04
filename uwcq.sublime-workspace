@@ -1,0 +1,578 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cou",
+				"courses"
+			],
+			[
+				"rege",
+				"regex"
+			],
+			[
+				"reg",
+				"regexCountMatch"
+			],
+			[
+				"sear",
+				"searched"
+			],
+			[
+				"sor",
+				"sortFilterWith"
+			],
+			[
+				"RE",
+				"regexCountMatch"
+			],
+			[
+				"fil",
+				"filtered"
+			],
+			[
+				"de",
+				"delay"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"sa",
+				"searchText"
+			],
+			[
+				"searc",
+				"searchText"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"M",
+				"MEM_START"
+			],
+			[
+				"ME",
+				"MEM_END"
+			],
+			[
+				"COR",
+				"CORE_MAP_NPAGES"
+			],
+			[
+				"CO",
+				"CORE_MAP"
+			],
+			[
+				"lo",
+				"long"
+			],
+			[
+				"l",
+				"long"
+			],
+			[
+				"fou",
+				"found_space"
+			],
+			[
+				"lon",
+				"long_enough"
+			],
+			[
+				"core",
+				"CORE_MAP"
+			],
+			[
+				"alloc",
+				"alloc_kpages"
+			],
+			[
+				"padd",
+				"paddr_t"
+			],
+			[
+				"page",
+				"PAGE_SIZE"
+			],
+			[
+				"Me",
+				"MEM_START"
+			],
+			[
+				"CORE",
+				"CORE_MAP_START"
+			],
+			[
+				"MEM",
+				"MEM_START"
+			],
+			[
+				"PAG",
+				"PAGE_SIZE"
+			],
+			[
+				"me",
+				"mem_end"
+			],
+			[
+				"op",
+				"OPT_A3"
+			],
+			[
+				"ver",
+				"vertices"
+			],
+			[
+				"set",
+				"setB"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				],
+				[
+					"Packages/User/build.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/build.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 147.0,
+		"last_filter": "new",
+		"selected_items":
+		[
+			[
+				"new",
+				"ANF: New File"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"format",
+				"SublimeAStyleFormatter: Format Current File"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"math",
+				"UnicodeMath: Insert"
+			],
+			[
+				"insal",
+				"Package Control: Install Package"
+			],
+			[
+				"renam",
+				"ANF: Rename File"
+			],
+			[
+				"disable ",
+				"Package Control: Disable Package"
+			],
+			[
+				"newfile",
+				"ANF: New File"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 485.0
+	},
+	"console":
+	{
+		"height": 289.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/ylilarry/lab/ember/uwcq"
+	],
+	"file_history":
+	[
+		"/Users/ylilarry/lab/ember/uwcq/app/makefile",
+		"/Users/ylilarry/lab/ember/uwcq/app/components/home-searchbar.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/components/home-course-entry.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/templates/home.hbs",
+		"/Users/ylilarry/lab/ember/uwcq/app/components/schedule-calendar.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/models/course.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/templates/components/home-course-entry.hbs",
+		"/Users/ylilarry/.bashrc",
+		"/Users/ylilarry/lab/ember/uwcq/app/adapters/application.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/controllers/home.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/styles/app.scss",
+		"/Users/ylilarry/lab/ember/uwcq/app/controllers/schedule.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/templates/components/schedule-calendar.hbs",
+		"/Users/ylilarry/lab/ember/uwcq/vendor/courses.json",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/include/addrspace.h",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/arch/mips/vm/dumbvm.c",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/include/kern/wait.h",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/syscall/loadelf.c",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/include/syscall.h",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/syscall/proc_syscalls.c",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/arch/mips/locore/trap.c",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/include/kern/syscall.h",
+		"/Users/ylilarry/Volumes/y667li/cs350-os161/os161-1.99/kern/arch/mips/include/trapframe.h",
+		"/Users/ylilarry/Dropbox/CS360/a4/build",
+		"/Users/ylilarry/Dropbox/CS360/a4/a3.tex",
+		"/Users/ylilarry/Dropbox/CS341/a12/build",
+		"/Users/ylilarry/Dropbox/CS341/a11/a11.py",
+		"/Users/ylilarry/Dropbox/CS341/a11/20534559-hw11.tex"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"rw",
+			"dist",
+			"\\\\b",
+			"+",
+			"course.title",
+			"\"",
+			"length",
+			"courses",
+			"rmed",
+			"newls",
+			"keyEq",
+			"catalog",
+			"category",
+			"name",
+			"catelog",
+			"name",
+			"key",
+			"MEM_START",
+			"trapcodenames",
+			"TLB miss on store",
+			"CORE_MAP_SIZE",
+			"consecutive",
+			"found_unused",
+			"{",
+			"CORE_MAP_START",
+			"core_map_frame",
+			",",
+			"lu",
+			", ",
+			"CORE_MAP_START",
+			"mem_end",
+			"mem_start",
+			"MEM_BYTES",
+			"N_PAGES",
+			"sys__exit",
+			"kill_curthread",
+			"epc",
+			"EPC",
+			"epc",
+			"d",
+			"D",
+			"@",
+			"M",
+			"@",
+			"D_x",
+			"D_w",
+			"<M,w>",
+			"^\\ast",
+			"in",
+			"S",
+			"R",
+			"b",
+			"a",
+			"union has exactly",
+			"{}",
+			",",
+			"\\times",
+			"[k_0,k_1,..,k_n]",
+			"a",
+			"\\inf",
+			"sum",
+			"path",
+			"p_",
+			"was",
+			"should be",
+			" by mistake",
+			"python",
+			"hamiltonian path",
+			"graph",
+			"SPH",
+			"minimal",
+			"arbiturary",
+			"arbituary",
+			"shortestWeight",
+			"shortestCycle",
+			"shortestPath",
+			"Sofar",
+			"shortestPathSofar",
+			"shortestPathWeight",
+			"found",
+			"weight",
+			"of the gra",
+			"texttt",
+			"textt",
+			"cycle",
+			"cE",
+			"ce",
+			"cE",
+			"_E",
+			"reduces to",
+			"main",
+			"transitiveClosure",
+			"reach",
+			"->",
+			"SET",
+			"true",
+			"A",
+			"a",
+			"A",
+			"coP",
+			"CoP",
+			"coP",
+			"A",
+			"\\not",
+			"floor(length/2)",
+			"O(",
+			"floor",
+			"foor",
+			"lfoor",
+			"arr",
+			"2_sort",
+			"len",
+			"start",
+			"w"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"subject",
+			"catalog",
+			"id"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 197.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "uwcq.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"home.js",
+				"controllers/home.js"
+			],
+			[
+				"cpu.h",
+				"include/cpu.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 87.0,
+		"last_filter": "roundu",
+		"selected_items":
+		[
+			[
+				"roundu",
+				"ROUNDUP"
+			],
+			[
+				"subpage",
+				"subpage_kmalloc"
+			],
+			[
+				"array",
+				"array"
+			],
+			[
+				"ram_get",
+				"ram_getsize"
+			],
+			[
+				"kmall",
+				"kmalloc"
+			],
+			[
+				"vm_",
+				"vm_bootstrap"
+			],
+			[
+				"sysexit",
+				"sys__exit"
+			],
+			[
+				"sys_exi",
+				"sys__exit"
+			],
+			[
+				"mkwa",
+				"_MKWAIT_SIG"
+			],
+			[
+				"sys_",
+				"sys__exit"
+			],
+			[
+				"exit",
+				"SYS__exit"
+			],
+			[
+				"kill_",
+				"kill_curthread"
+			],
+			[
+				"vm_fa",
+				"vm_fault"
+			],
+			[
+				"as_creat",
+				"as_create"
+			],
+			[
+				"load",
+				"load_elf"
+			]
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -14,13 +14,12 @@ import Data.HashMap.Strict
 import Text.Printf
 import Prelude hiding (id)
 import TextShow
-import Data.Extend
 
 data InputCourse = InputCourse {
-      course_id      :: Maybe Text
-    , subject        :: Maybe Text
-    , catalog_number :: Maybe Text
-    , title          :: Maybe Text
+      course_id      :: Text
+    , subject        :: Text
+    , catalog_number :: Text
+    , title          :: Text
 } deriving (Generic, Show)
 
 instance FromJSON InputCourse
@@ -47,10 +46,10 @@ parseInput str =
 outputCourse :: InputCourse -> OutputCourse
 outputCourse a = 
     OutputCourse {
-        id = fromJust $ course_id a
-      , subject = fromJust $ subject (a :: InputCourse)
-      , number = fromJust $ catalog_number a
-      , title = fromJust $ title (a :: InputCourse)
+        id = course_id a
+      , subject = subject (a :: InputCourse)
+      , number = catalog_number a
+      , title = title (a :: InputCourse)
     }
 
 instance ResourcefulEntity OutputCourse where

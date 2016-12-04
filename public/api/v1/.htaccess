@@ -1,0 +1,10 @@
+<FilesMatch ".*">
+    SetHandler cgi-script
+</FilesMatch>
+
+Options +ExecCGI
+AddHandler cgi-script .cgi
+
+RewriteEngine On
+RewriteRule "^courses$"  "courses?id=all"
+RewriteRule "^courses/(\d+)$"  "courses?id=$1"

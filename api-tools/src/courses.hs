@@ -73,3 +73,5 @@ main = do
     txt <- B.getContents
     B.putStr $ encode $ outputDocument $ parseInput txt
     
+    
+    
