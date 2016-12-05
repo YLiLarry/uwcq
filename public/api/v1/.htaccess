@@ -5,6 +5,9 @@
 Options +ExecCGI
 AddHandler cgi-script .cgi
 
+# Allow numbers only in dynamic path segments!
+
 RewriteEngine On
-RewriteRule "^courses$"  "courses?id=all"
-RewriteRule "^courses/(\d+)$"  "courses?id=$1"
+RewriteRule "^courses$"  "courses?subject=all" [L]
+RewriteRule "^courses/(\w+)/(\w+)$"  "courses?subject=$1&number=$2" [L]
+RewriteRule ".*"  "404" [L]

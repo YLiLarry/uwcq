@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+echo "Content-Type: text/plain"
+echo
+
+saveIFS=$IFS
+IFS='=&'
+parm=($QUERY_STRING)
+IFS=$saveIFS
+
+for ((i=0; i<${#parm[@]}; i+=2))
+do
+    declare query_${parm[i]}=${parm[i+1]}
+done
+
+API_KEY=bb49b6c87331aaa6bafcf385888bab3e
+
+function query() {
+    curl -s "https://api.uwaterloo.ca/v2/$1?key=$API_KEY"
+}
+
+function tool() {
+    echo "../tools/$1"
+}

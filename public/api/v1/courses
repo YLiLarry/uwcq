@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
-. ./parseQuery
+. ./setupQuery
 
 # used in route /courses/[id]
 # echo ${query[id]}
 
-if [ ${query[id]} = "all" ]; then
-    cat ../data/courses
+if [ "${query_subject}" == "all" ]; then
+    query "courses.json" | `tool courses`
 else
-    ../tools/get-course-info ${query[id]}
+    query "courses/${query_subject}/${query_number}.json" | `tool course-info`
 fi
+

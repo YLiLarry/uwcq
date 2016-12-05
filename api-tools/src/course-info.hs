@@ -58,12 +58,12 @@ snakeToCamel = snakeToCamel' False
         snakeToCamel' saw_ (x:xs) = (if saw_ then C.toUpper x else x) 
                                         : snakeToCamel' False xs
 
-instance FromJSON Course
+instance FromJSON Course 
 instance ToJSON Course where
-    toEncoding = genericToEncoding options where 
-        options = defaultOptions {
+    toJSON = genericToJSON options where 
+        options = (defaultOptions {
             fieldLabelModifier = modify
-        }
+        })
         modify "course_id" = "id"
         modify a = snakeToCamel a
 
@@ -85,11 +85,13 @@ instance ResourcefulEntity Course where
     resourceMetaData = const Nothing
     resourceRelationships = const Nothing
 
+
 outputDocument :: Course -> Document Course
 outputDocument cs = mkDocument [cs] Nothing Nothing 
 
 main :: IO ()
 main = do
     txt <- B.getContents
-    B.putStr $ encode $ outputDocument $ parseInput txt
+    let course = parseInput txt
+    B.putStr $ encode $ outputDocument course
     
