@@ -73,9 +73,15 @@ export default Ember.Controller.extend({
          this.set("searchClicked", true);
          this.set("state", 1);
       },
-      onExpand: function(id) {
-         this.set('expandedEntry', id);
+      onExpandEntry: function(course) {
+         var self = this;
+         this.get('store').findRecord('course', course.id, {reload: true})
+         .then(function(response) {
+            course.setProperties(response);
+            self.set('expandedEntry', course.id);
+         });
       }
+
    },
    searchText: "",
    added: [],
@@ -94,7 +100,6 @@ export default Ember.Controller.extend({
          // return regexCountMatch(regex, context);
       }, all);
       searched = R.reverse(searched);
-      console.log(regs, searched);
       var displayed = searched.slice(0,this.get('coursesDisplayedMax'));
       var added = this.get('added');
       var rmed = R.differenceWith(idEq, displayed, added);
@@ -103,7 +108,7 @@ export default Ember.Controller.extend({
    }),
    searchClicked: false,
    addFirstCourse: true,
-   state: 0,
+   state: 1,
    expandedEntry: 0,
    schedules: R.map((id) => {
          var arr = [course, course2];

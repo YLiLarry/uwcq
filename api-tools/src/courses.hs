@@ -10,7 +10,8 @@ import qualified Data.Text as T
 import Data.ByteString.Lazy as B (ByteString)
 import qualified Data.ByteString.Lazy as B
 import Data.Maybe
-import Data.HashMap.Strict
+import Data.HashMap.Strict (HashMap)
+import qualified Data.HashMap.Strict as HM
 import Text.Printf
 import Prelude hiding (id)
 import TextShow
@@ -42,7 +43,7 @@ parseInput str =
       A.Error e -> error $ printf "could not parse: %v..." (take 100 $ show str)
     where 
       findData :: HashMap Text Value -> Value
-      findData m = m ! "data"
+      findData m = m HM.! "data"
 
 outputCourse :: InputCourse -> OutputCourse
 outputCourse a = 
@@ -61,11 +62,7 @@ instance ResourcefulEntity OutputCourse where
     resourceRelationships = const Nothing
 
 outputDocument :: [InputCourse] -> Document OutputCourse
-outputDocument cs = mkDocument resc Nothing Nothing 
-    where
-        resc = zipWith convert cs [1..length cs]
-        convert :: InputCourse -> Int -> OutputCourse
-        convert c i = (outputCourse c){id = showt i}
+outputDocument cs = mkDocument (map outputCourse cs) Nothing Nothing 
 
 
 main :: IO ()

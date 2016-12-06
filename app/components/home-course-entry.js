@@ -2,14 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
    actions: {
-      expand: function() {
-         var exp = this.get('expandedEntry') != this.course.id;
-         if (exp) {
-            this.set('expandedEntry', this.course.id);
-            toggle(this.course.id, true);
+      onExpand: function() {
+         var course = this.get('course');
+         if (this.get('expandedEntry') != course.id) {
+            // on expand
+            this.get('onExpandEntry')(course);
          } else {
-            this.set('expandedEntry', 0);
-            toggle(this.course.id, false);
+            this.set('expandedEntry', false);
          }
       },
       onAddCourse: function(event) {
@@ -19,28 +18,23 @@ export default Ember.Component.extend({
       onRemoveCourse: function() {
          this.onRemoveCourse(this.course.id);
          this.set('course.added', false);
-      }
+      },
    },
    expanded: Ember.computed('expandedEntry', function() {
-      var exp = this.expandedEntry == this.course.id;
-      if (! exp) {
-         toggle(this.course.id, false);
+      var course = this.get('course');
+      var exp = this.expandedEntry == course.id;
+      var body = $('.home-course-entry#'+course.id+' .body');
+      if (exp) {
+         body.find('.description').html(course.get('description'));
+         body.animate({
+            height: body.children('.margin').outerHeight(true)
+         });
+      } else {
+         body.animate({
+            height: 0
+         });
       }
       return exp;
    }),
    addFirstCourse: true
 });
-
-// toggle expand
-function toggle(id, expand) {
-   var body = $('.home-course-entry#'+id+' .body');
-   if (expand) {
-      body.animate({
-         height: body.children(".margin").outerHeight(true)
-      });
-   } else {
-      body.animate({
-         height: 0
-      });
-   }
-}

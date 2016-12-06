@@ -4,9 +4,9 @@
 # used in route /courses/[id]
 # echo ${query[id]}
 
-if [ "${query_subject}" == "all" ]; then
+if [ "${query_id}" == "all" ]; then
     query "courses.json" | `tool courses`
 else
-    query "courses/${query_subject}/${query_number}.json" | `tool course-info`
+    query "courses/${query_id}.json" | `tool course-info`
 fi
 

@@ -14,7 +14,7 @@
             <span class="glyphicon"><span class="icon"></span></span>
          </div>
       </div>
-      <div class="expand-bar clickable" onClick={{action "expand"}}>
+      <div class="expand-bar clickable" onClick={{action "onExpand"}}>
          <i class="glyphicon glyphicon-chevron-{{if expanded 'up' 'down'}}"></i>
          <span class="subject">{{course.id}}</span>
          <span class="subject">{{course.subject}}</span>
@@ -24,6 +24,7 @@
    </div>
    <div class="body watch-transition">
    <div class="margin">
+      <div class="description"></div>
       <table class="table">
          <thead>
             <tr>

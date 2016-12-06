@@ -1,6 +1,5 @@
 .PHONEY: default
 default:
-		make build
 		make dep
 
 .PHONEY: build
