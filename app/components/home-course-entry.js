@@ -25,7 +25,25 @@ export default Ember.Component.extend({
       var exp = this.expandedEntry == course.id;
       var body = $('.home-course-entry#'+course.id+' .body');
       if (exp) {
+         // create description
          body.find('.description').html(course.get('description'));
+         // create schedule table
+         var tbodyHTML = "";                                                                                     
+         course.get('classes').forEach(function(c) {
+            var trHTML = '                                                                         \
+               <tr>                                                                                \
+                  <td>Section 01</td>                                                              \
+                  <td>MWF</td>                                                                     \
+                  <td>10:00pm-12:00pm</td>                                                         \
+                  <td>'+c.get('instructor')+'</td>                                                 \
+                  <td>70</td>                                                                      \
+                  <td>100</td>                                                                     \
+                  <td><button type="botton" class="btn btn-link">Prefer this section</button></td> \
+               </tr>                                                                               \
+            ';
+            tbodyHTML += trHTML;
+         })
+         body.find('tbody').html(tbodyHTML);
          body.animate({
             height: body.children('.margin').outerHeight(true)
          });

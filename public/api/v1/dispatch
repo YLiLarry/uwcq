@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+. ./setupQuery
+
+# used in route /courses/[id]
+# echo ${query[id]}
+
+if [ "${query_action}" == "course-ls" ]; then
+    q="courses.json"
+    
+elif [ "${query_action}" == "course-info" ]; then
+    q="courses/${query_id}.json"
+    
+elif [ "${query_action}" == "course-sched" ]; then
+    q="terms/${query_term}/${query_subject}/${query_number}/schedule.json"
+    
+else
+    echo "$QUERY_STRING"
+    exit 1
+fi
+
+query $q | `tool $query_action`
+ec=$?
+
+if [[ ec -ne 0 ]]; then 
+    echo "error in $q"
+    exit 1
+fi

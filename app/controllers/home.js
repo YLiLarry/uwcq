@@ -75,10 +75,20 @@ export default Ember.Controller.extend({
       },
       onExpandEntry: function(course) {
          var self = this;
-         this.get('store').findRecord('course', course.id, {reload: true})
-         .then(function(response) {
-            course.setProperties(response);
+         // find description
+         var dp = this.get('store').findRecord('course', course.id, {reload: true});
+         // find schedules
+         var schd = this.get('store').query('class', {
+              action: 'course-sched'
+            , term: 1171
+            , subject: course.get('subject')
+            , number: course.get('number')
+         });
+         
+         Ember.RSVP.all([dp, schd]).then(function(dp, sched) {
+            course.setProperties(dp);
             self.set('expandedEntry', course.id);
+            course.get('classes').pushObjects(schd);
          });
       }
 

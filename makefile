@@ -1,5 +1,6 @@
 .PHONEY: default
 default:
+		make build
 		make dep
 
 .PHONEY: build
@@ -8,7 +9,7 @@ build:
 
 .PHONEY: dep
 dep:
-		sudo rm -r /Library/WebServer/Documents/dist
+		sudo rm -rf /Library/WebServer/Documents/dist
 		sudo cp -r dist /Library/WebServer/Documents
 		sudo find /Library/WebServer/Documents -type f -exec chmod a+r {} \;
 		sudo find /Library/WebServer/Documents -type d -exec chmod a+rx {} \;

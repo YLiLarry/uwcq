@@ -6,4 +6,5 @@ export default DS.Model.extend({
     , number      : DS.attr('number')
     , description : DS.attr('string')
     , instructor  : DS.attr('string')
+    , classes     : DS.hasMany('class')
 });
