@@ -114,6 +114,9 @@ export default Ember.Controller.extend({
       var added = this.get('added');
       var rmed = R.differenceWith(idEq, displayed, added);
       displayed = R.concat(added, rmed);
+      if (rmed.length == 1) {
+         this.actions.onExpandEntry.call(this, rmed[0]);
+      }
       return displayed;
    }),
    searchClicked: false,

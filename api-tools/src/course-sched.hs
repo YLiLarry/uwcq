@@ -8,6 +8,7 @@ import Network.JSONApi as J hiding (id)
 import GHC.Generics
 import Data.Text (Text)
 import qualified Data.Text as T
+import qualified Data.Text.Read as T
 import Data.ByteString.Lazy as B (ByteString)
 import qualified Data.ByteString.Lazy as B
 import Data.Maybe
@@ -91,12 +92,13 @@ instance ToJSON Time
 
 data Section = Section {
       id         :: Integer
-    , weekdays   :: Int
+    , weekdays   :: [Bool]
     , instructor :: Text
-    , startTime  :: Time
-    , endTime    :: Time
+    , start      :: Time
+    , end        :: Time
     , enrolled   :: Int
     , capacity   :: Int
+    , section    :: Text
 } deriving (Generic, Show)
 
 instance FromJSON Section
@@ -121,20 +123,44 @@ parseInput str =
       findData m = m HM.! "data"
 
 
+parseWeekday :: Text -> [Bool]
+parseWeekday txt = [hasM, hasT, hasW, hasTh, hasF]
+    where 
+        
+        hasM = T.replace "M" "" txt /= txt
+        hasT = let s = T.replace "Th" "" txt in T.replace "T" "" s /= s
+        hasW = T.replace "W" "" txt /= txt
+        hasTh = T.replace "Th" "" txt /= txt
+        hasF = T.replace "F" "" txt /= txt
+
+parseTime :: Text -> Time
+parseTime txt = Time hi mi 
+    where 
+        [h,m] = T.splitOn ":" txt
+        Right (hi,_) = T.decimal h
+        Right (mi,_) = T.decimal m
+    
+rmMidName :: [Text] -> [Text]
+rmMidName ls = head ls : (init $ tail ls)
+    
 schedule2section :: Schedule -> Section
 schedule2section s = Section {
           id          = fromJust $ class_number s
-        , weekdays    = 0
+        , section     = fromJust $ section (s :: Schedule)
+        , weekdays    = parseWeekday $ fromJust $ weekdays' =<< (date =<< head <$> classes s :: Maybe Date)
         , instructor  = 
             case (instructors =<< head <$> classes s) of 
                 Just [] -> ""
-                Just ls -> T.unwords $ reverse $ T.splitOn "," $ head ls
+                Just ls -> T.unwords $ reverse $ T.split (`elem` [',']) $ head ls
                 Nothing -> ""
-        , startTime   = Time 0 0
-        , endTime     = Time 0 0
+        , start   = parseTime $ fromJust $ start_time =<< date =<< head <$> classes s
+        , end     = parseTime $ fromJust $ end_time =<< date =<< head <$> classes s
         , enrolled    = fromJust $ enrollment_total s
         , capacity    = fromJust $ enrollment_capacity s
     }
+    where
+        weekdays' :: Date -> Maybe Text
+        weekdays' = weekdays
     
 instance ResourcefulEntity Section where
     resourceIdentifier a = showt $ id a

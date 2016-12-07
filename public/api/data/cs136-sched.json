@@ -5,7 +5,183 @@
       "associated_class": 1,
       "campus": "UW U",
       "catalog_number": "136",
-      "class_number": 6104,
+      "class_number": 5583,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "09:50",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "08:30",
+            "weekdays": "TTh"
+          },
+          "instructors": [
+            "Holtby,Daniel James"
+          ],
+          "location": {
+            "building": "MC",
+            "room": "2035"
+          }
+        }
+      ],
+      "enrollment_capacity": 88,
+      "enrollment_total": 87,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": null,
+      "related_component_2": "201",
+      "reserves": [],
+      "section": "LEC 001",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 2,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5593,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "09:50",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "08:30",
+            "weekdays": "TTh"
+          },
+          "instructors": [
+            "Irvine,Veronika Margaretha"
+          ],
+          "location": {
+            "building": "MC",
+            "room": "2034"
+          }
+        }
+      ],
+      "enrollment_capacity": 82,
+      "enrollment_total": 82,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": null,
+      "related_component_2": "201",
+      "reserves": [],
+      "section": "LEC 002",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 3,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5678,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "11:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "10:00",
+            "weekdays": "TTh"
+          },
+          "instructors": [
+            "Akinyemi,John Akinlabi"
+          ],
+          "location": {
+            "building": "STC",
+            "room": "0050"
+          }
+        }
+      ],
+      "enrollment_capacity": 88,
+      "enrollment_total": 88,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": null,
+      "related_component_2": "201",
+      "reserves": [],
+      "section": "LEC 003",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 4,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5679,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "11:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "10:00",
+            "weekdays": "TTh"
+          },
+          "instructors": [
+            "Holtby,Daniel James"
+          ],
+          "location": {
+            "building": "MC",
+            "room": "2035"
+          }
+        }
+      ],
+      "enrollment_capacity": 85,
+      "enrollment_total": 83,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": null,
+      "related_component_2": "201",
+      "reserves": [],
+      "section": "LEC 004",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 5,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5728,
       "classes": [
         {
           "date": {
@@ -19,25 +195,25 @@
             "weekdays": "TTh"
           },
           "instructors": [
-            "Tompkins,Dave"
+            "Mondal,Debajyoti"
           ],
           "location": {
             "building": "MC",
-            "room": "2034"
+            "room": "1056"
           }
         }
       ],
-      "enrollment_capacity": 90,
-      "enrollment_total": 78,
+      "enrollment_capacity": 86,
+      "enrollment_total": 86,
       "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
+      "last_updated": "2016-12-06T22:07:59-05:00",
       "note": "Choose TUT section for Related 1.",
       "related_component_1": null,
       "related_component_2": "201",
       "reserves": [],
-      "section": "LEC 001",
+      "section": "LEC 005",
       "subject": "CS",
-      "term": 1169,
+      "term": 1171,
       "title": "Elementary Algorithm Design and Data Abstraction",
       "topic": null,
       "units": 0.5,
@@ -46,10 +222,98 @@
     },
     {
       "academic_level": "undergraduate",
-      "associated_class": 2,
+      "associated_class": 6,
       "campus": "UW U",
       "catalog_number": "136",
-      "class_number": 6210,
+      "class_number": 5799,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "12:50",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "11:30",
+            "weekdays": "TTh"
+          },
+          "instructors": [
+            "Brecht,Timothy"
+          ],
+          "location": {
+            "building": "STC",
+            "room": "0040"
+          }
+        }
+      ],
+      "enrollment_capacity": 89,
+      "enrollment_total": 89,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": null,
+      "related_component_2": "201",
+      "reserves": [],
+      "section": "LEC 006",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 7,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5931,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "14:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "13:00",
+            "weekdays": "TTh"
+          },
+          "instructors": [
+            "Akinyemi,John Akinlabi"
+          ],
+          "location": {
+            "building": "QNC",
+            "room": "2502"
+          }
+        }
+      ],
+      "enrollment_capacity": 84,
+      "enrollment_total": 84,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": null,
+      "related_component_2": "201",
+      "reserves": [],
+      "section": "LEC 007",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 8,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5932,
       "classes": [
         {
           "date": {
@@ -66,22 +330,22 @@
             "Tompkins,Dave"
           ],
           "location": {
-            "building": "MC",
-            "room": "2034"
+            "building": "STC",
+            "room": "0040"
           }
         }
       ],
-      "enrollment_capacity": 90,
-      "enrollment_total": 89,
+      "enrollment_capacity": 83,
+      "enrollment_total": 86,
       "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
+      "last_updated": "2016-12-06T22:07:59-05:00",
       "note": "Choose TUT section for Related 1.",
       "related_component_1": null,
       "related_component_2": "201",
       "reserves": [],
-      "section": "LEC 002",
+      "section": "LEC 008",
       "subject": "CS",
-      "term": 1169,
+      "term": 1171,
       "title": "Elementary Algorithm Design and Data Abstraction",
       "topic": null,
       "units": 0.5,
@@ -90,10 +354,10 @@
     },
     {
       "academic_level": "undergraduate",
-      "associated_class": 3,
+      "associated_class": 9,
       "campus": "UW U",
       "catalog_number": "136",
-      "class_number": 6405,
+      "class_number": 6004,
       "classes": [
         {
           "date": {
@@ -110,22 +374,110 @@
             "Tompkins,Dave"
           ],
           "location": {
-            "building": "MC",
-            "room": "2034"
+            "building": "STC",
+            "room": "0040"
           }
         }
       ],
-      "enrollment_capacity": 90,
+      "enrollment_capacity": 88,
       "enrollment_total": 88,
       "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
+      "last_updated": "2016-12-06T22:07:59-05:00",
       "note": "Choose TUT section for Related 1.",
       "related_component_1": null,
       "related_component_2": "201",
       "reserves": [],
-      "section": "LEC 003",
+      "section": "LEC 009",
       "subject": "CS",
-      "term": 1169,
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 10,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 6005,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "15:50",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "14:30",
+            "weekdays": "TTh"
+          },
+          "instructors": [
+            "Brecht,Timothy"
+          ],
+          "location": {
+            "building": "STC",
+            "room": "0050"
+          }
+        }
+      ],
+      "enrollment_capacity": 86,
+      "enrollment_total": 86,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": null,
+      "related_component_2": "201",
+      "reserves": [],
+      "section": "LEC 010",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 11,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 7454,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "17:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "16:00",
+            "weekdays": "TTh"
+          },
+          "instructors": [
+            "Fortes Tondello,Gustavo"
+          ],
+          "location": {
+            "building": "STC",
+            "room": "0050"
+          }
+        }
+      ],
+      "enrollment_capacity": 87,
+      "enrollment_total": 87,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": null,
+      "related_component_2": "201",
+      "reserves": [],
+      "section": "LEC 011",
+      "subject": "CS",
+      "term": 1171,
       "title": "Elementary Algorithm Design and Data Abstraction",
       "topic": null,
       "units": 0.5,
@@ -137,7 +489,49 @@
       "associated_class": 99,
       "campus": "UW U",
       "catalog_number": "136",
-      "class_number": 6105,
+      "class_number": 5680,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "09:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "08:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4042"
+          }
+        }
+      ],
+      "enrollment_capacity": 65,
+      "enrollment_total": 61,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 101",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5681,
       "classes": [
         {
           "date": {
@@ -148,68 +542,26 @@
             "is_tba": false,
             "start_date": null,
             "start_time": "13:30",
-            "weekdays": "M"
+            "weekdays": "W"
           },
           "instructors": [],
           "location": {
-            "building": "MC",
-            "room": "2038"
+            "building": "STC",
+            "room": "0060"
           }
         }
       ],
-      "enrollment_capacity": 55,
-      "enrollment_total": 57,
+      "enrollment_capacity": 65,
+      "enrollment_total": 65,
       "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
-      "note": "Choose TUT section for Related 1.",
-      "related_component_1": "99",
-      "related_component_2": null,
-      "reserves": [],
-      "section": "TUT 101",
-      "subject": "CS",
-      "term": 1169,
-      "title": "Elementary Algorithm Design and Data Abstraction",
-      "topic": null,
-      "units": 0.5,
-      "waiting_capacity": 0,
-      "waiting_total": 0
-    },
-    {
-      "academic_level": "undergraduate",
-      "associated_class": 99,
-      "campus": "UW U",
-      "catalog_number": "136",
-      "class_number": 6119,
-      "classes": [
-        {
-          "date": {
-            "end_date": null,
-            "end_time": "17:20",
-            "is_cancelled": false,
-            "is_closed": false,
-            "is_tba": false,
-            "start_date": null,
-            "start_time": "16:30",
-            "weekdays": "M"
-          },
-          "instructors": [],
-          "location": {
-            "building": "MC",
-            "room": "4041"
-          }
-        }
-      ],
-      "enrollment_capacity": 55,
-      "enrollment_total": 55,
-      "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
+      "last_updated": "2016-12-06T22:07:59-05:00",
       "note": "Choose TUT section for Related 1.",
       "related_component_1": "99",
       "related_component_2": null,
       "reserves": [],
       "section": "TUT 102",
       "subject": "CS",
-      "term": 1169,
+      "term": 1171,
       "title": "Elementary Algorithm Design and Data Abstraction",
       "topic": null,
       "units": 0.5,
@@ -221,7 +573,7 @@
       "associated_class": 99,
       "campus": "UW U",
       "catalog_number": "136",
-      "class_number": 6120,
+      "class_number": 5682,
       "classes": [
         {
           "date": {
@@ -232,26 +584,26 @@
             "is_tba": false,
             "start_date": null,
             "start_time": "09:30",
-            "weekdays": "M"
+            "weekdays": "W"
           },
           "instructors": [],
           "location": {
             "building": "MC",
-            "room": "4063"
+            "room": "4042"
           }
         }
       ],
-      "enrollment_capacity": 55,
-      "enrollment_total": 42,
+      "enrollment_capacity": 65,
+      "enrollment_total": 65,
       "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
+      "last_updated": "2016-12-06T22:07:59-05:00",
       "note": "Choose TUT section for Related 1.",
       "related_component_1": "99",
       "related_component_2": null,
       "reserves": [],
       "section": "TUT 103",
       "subject": "CS",
-      "term": 1169,
+      "term": 1171,
       "title": "Elementary Algorithm Design and Data Abstraction",
       "topic": null,
       "units": 0.5,
@@ -263,7 +615,343 @@
       "associated_class": 99,
       "campus": "UW U",
       "catalog_number": "136",
-      "class_number": 6347,
+      "class_number": 5683,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "09:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "08:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4060"
+          }
+        }
+      ],
+      "enrollment_capacity": 65,
+      "enrollment_total": 44,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 104",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5684,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "12:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "11:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4042"
+          }
+        }
+      ],
+      "enrollment_capacity": 65,
+      "enrollment_total": 62,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 105",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5685,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "11:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "10:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4042"
+          }
+        }
+      ],
+      "enrollment_capacity": 65,
+      "enrollment_total": 65,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 106",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5686,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "14:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "13:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4058"
+          }
+        }
+      ],
+      "enrollment_capacity": 60,
+      "enrollment_total": 60,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 107",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5729,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "12:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "11:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4063"
+          }
+        }
+      ],
+      "enrollment_capacity": 60,
+      "enrollment_total": 60,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 108",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5800,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "10:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "09:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4063"
+          }
+        }
+      ],
+      "enrollment_capacity": 60,
+      "enrollment_total": 47,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 109",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5801,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "13:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "12:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "RCH",
+            "room": "308"
+          }
+        }
+      ],
+      "enrollment_capacity": 60,
+      "enrollment_total": 59,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 110",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5933,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "11:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "10:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4058"
+          }
+        }
+      ],
+      "enrollment_capacity": 60,
+      "enrollment_total": 60,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 111",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5934,
       "classes": [
         {
           "date": {
@@ -274,26 +962,26 @@
             "is_tba": false,
             "start_date": null,
             "start_time": "14:30",
-            "weekdays": "M"
+            "weekdays": "W"
           },
           "instructors": [],
           "location": {
             "building": "MC",
-            "room": "2038"
+            "room": "4063"
           }
         }
       ],
-      "enrollment_capacity": 55,
-      "enrollment_total": 55,
+      "enrollment_capacity": 60,
+      "enrollment_total": 60,
       "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
+      "last_updated": "2016-12-06T22:07:59-05:00",
       "note": "Choose TUT section for Related 1.",
       "related_component_1": "99",
       "related_component_2": null,
       "reserves": [],
-      "section": "TUT 104",
+      "section": "TUT 112",
       "subject": "CS",
-      "term": 1169,
+      "term": 1171,
       "title": "Elementary Algorithm Design and Data Abstraction",
       "topic": null,
       "units": 0.5,
@@ -305,7 +993,91 @@
       "associated_class": 99,
       "campus": "UW U",
       "catalog_number": "136",
-      "class_number": 6406,
+      "class_number": 5935,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "16:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "15:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4063"
+          }
+        }
+      ],
+      "enrollment_capacity": 60,
+      "enrollment_total": 60,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 113",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5936,
+      "classes": [
+        {
+          "date": {
+            "end_date": null,
+            "end_time": "16:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "15:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4058"
+          }
+        }
+      ],
+      "enrollment_capacity": 60,
+      "enrollment_total": 60,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 114",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 6007,
       "classes": [
         {
           "date": {
@@ -316,7 +1088,7 @@
             "is_tba": false,
             "start_date": null,
             "start_time": "16:30",
-            "weekdays": "M"
+            "weekdays": "W"
           },
           "instructors": [],
           "location": {
@@ -325,17 +1097,17 @@
           }
         }
       ],
-      "enrollment_capacity": 50,
-      "enrollment_total": 46,
+      "enrollment_capacity": 60,
+      "enrollment_total": 60,
       "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
+      "last_updated": "2016-12-06T22:07:59-05:00",
       "note": "Choose TUT section for Related 1.",
       "related_component_1": "99",
       "related_component_2": null,
       "reserves": [],
-      "section": "TUT 105",
+      "section": "TUT 115",
       "subject": "CS",
-      "term": 1169,
+      "term": 1171,
       "title": "Elementary Algorithm Design and Data Abstraction",
       "topic": null,
       "units": 0.5,
@@ -347,16 +1119,58 @@
       "associated_class": 99,
       "campus": "UW U",
       "catalog_number": "136",
-      "class_number": 6106,
+      "class_number": 7455,
       "classes": [
         {
           "date": {
-            "end_date": "10/31",
+            "end_date": null,
+            "end_time": "12:20",
+            "is_cancelled": false,
+            "is_closed": false,
+            "is_tba": false,
+            "start_date": null,
+            "start_time": "11:30",
+            "weekdays": "W"
+          },
+          "instructors": [],
+          "location": {
+            "building": "MC",
+            "room": "4060"
+          }
+        }
+      ],
+      "enrollment_capacity": 60,
+      "enrollment_total": 58,
+      "held_with": [],
+      "last_updated": "2016-12-06T22:07:59-05:00",
+      "note": "Choose TUT section for Related 1.",
+      "related_component_1": "99",
+      "related_component_2": null,
+      "reserves": [],
+      "section": "TUT 116",
+      "subject": "CS",
+      "term": 1171,
+      "title": "Elementary Algorithm Design and Data Abstraction",
+      "topic": null,
+      "units": 0.5,
+      "waiting_capacity": 0,
+      "waiting_total": 0
+    },
+    {
+      "academic_level": "undergraduate",
+      "associated_class": 99,
+      "campus": "UW U",
+      "catalog_number": "136",
+      "class_number": 5639,
+      "classes": [
+        {
+          "date": {
+            "end_date": "02/27",
             "end_time": "20:50",
             "is_cancelled": false,
             "is_closed": false,
             "is_tba": false,
-            "start_date": "10/31",
+            "start_date": "02/27",
             "start_time": "19:00",
             "weekdays": "M"
           },
@@ -369,17 +1183,17 @@
           }
         }
       ],
-      "enrollment_capacity": 270,
-      "enrollment_total": 255,
+      "enrollment_capacity": 990,
+      "enrollment_total": 946,
       "held_with": [],
-      "last_updated": "2016-12-06T00:01:17-05:00",
+      "last_updated": "2016-12-06T22:07:59-05:00",
       "note": "Choose TUT section for Related 1.",
       "related_component_1": "99",
       "related_component_2": null,
       "reserves": [],
       "section": "TST 201",
       "subject": "CS",
-      "term": 1169,
+      "term": 1171,
       "title": "Elementary Algorithm Design and Data Abstraction",
       "topic": null,
       "units": 0.5,
@@ -393,9 +1207,9 @@
       "disclaimer": "Review the 'No Warranty' section of the University of Waterloo Open Data License before using this data. If building services upon this data, please inform your users of the inherent risks (as a best practice)",
       "license": "https://uwaterloo.ca/open-data/university-waterloo-open-data-license-agreement-v1"
     },
-    "method_id": 1171,
-    "requests": 366,
+    "method_id": 1193,
+    "requests": 798,
     "status": 200,
-    "timestamp": 1481002785
+    "timestamp": 1481083157
   }
 }

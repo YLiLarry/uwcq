@@ -27,6 +27,12 @@ $HOME_WL: 20vw;
    right: 0;
 }
 
+#home-course-entries {
+   .ember-view:last-of-type {
+      margin-bottom: 1em;
+   }
+}
+
 .state-0 {
    
    #home-search {

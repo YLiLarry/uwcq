@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import S from 'npm:sprintf-js'
 
 export default Ember.Component.extend({
    actions: {
@@ -28,18 +29,34 @@ export default Ember.Component.extend({
          // create description
          body.find('.description').html(course.get('description'));
          // create schedule table
-         var tbodyHTML = "";                                                                                     
+         var tbodyHTML = "";      
+         function showWeekDays(arr) {
+            var s = '';
+            s += arr[0] ? 'M'  : '';
+            s += arr[1] ? 'T'  : '';
+            s += arr[2] ? 'W'  : '';
+            s += arr[3] ? 'Th' : '';
+            s += arr[4] ? 'F'  : '';
+            return s;
+         }             
+         function showTime(time) {
+            return S.sprintf("%02d:%02d", time.hour, time.minute);
+         }   
+         function rmMidName(name) {
+            var ls = R.split(' ', name);
+            return R.join(' ', [R.head(ls), R.last(ls)]);
+         }                                                               
          course.get('classes').forEach(function(c) {
-            var trHTML = '                                                                         \
-               <tr>                                                                                \
-                  <td>Section 01</td>                                                              \
-                  <td>MWF</td>                                                                     \
-                  <td>10:00pm-12:00pm</td>                                                         \
-                  <td>'+c.get('instructor')+'</td>                                                 \
-                  <td>70</td>                                                                      \
-                  <td>100</td>                                                                     \
-                  <td><button type="botton" class="btn btn-link">Prefer this section</button></td> \
-               </tr>                                                                               \
+            var trHTML = '                                                                          \
+               <tr>                                                                                 \
+                  <td>'+c.get('section')+'</td>                                                     \
+                  <td>'+showWeekDays(c.get('weekdays'))+'</td>                                      \
+                  <td>'+showTime(c.get('start'))+'-'+showTime(c.get('end'))+'</td>          \
+                  <td>'+rmMidName(c.get('instructor'))+'</td>                                                  \
+                  <td>'+c.get('enrolled')+'</td>                                                    \
+                  <td>'+c.get('capacity')+'</td>                                                    \
+                  <td><a>Prefer this section</a></td>  \
+               </tr>                                                                                \
             ';
             tbodyHTML += trHTML;
          })
