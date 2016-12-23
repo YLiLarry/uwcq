@@ -1,10 +1,11 @@
 .PHONEY: default
 default:
+		make build
 		make dep
 
 .PHONEY: build
 build:
-		cd api-tools && stack install
+		cd api-tools && stack install --trace --fast
 		ember build
 
 .PHONEY: dep

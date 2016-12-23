@@ -35,7 +35,7 @@ data Schedule = Schedule {
     , note                :: Maybe Text
     , related_component_1 :: Maybe Text
     , related_component_2 :: Maybe Text
-    , reserves            :: Maybe [Text]
+    , reserves            :: Maybe [Reserve]
     , section             :: Maybe Text
     , subject             :: Maybe Text
     , term                :: Maybe Int
@@ -80,6 +80,14 @@ data Date = Date {
 instance FromJSON Date
 instance ToJSON Date
 
+data Reserve = Reserve {
+      reserve_group       :: Maybe Text
+    , enrollment_capacity :: Maybe Int
+    , enrollment_total    :: Maybe Int
+} deriving (Generic, Show)
+
+instance FromJSON Reserve
+instance ToJSON Reserve
 
 -- Output Data Types
 data Time = Time {
@@ -92,13 +100,13 @@ instance ToJSON Time
 
 data Section = Section {
       id         :: Integer
-    , weekdays   :: [Bool]
-    , instructor :: Text
-    , start      :: Time
-    , end        :: Time
-    , enrolled   :: Int
-    , capacity   :: Int
-    , section    :: Text
+    , weekdays   :: Maybe [Bool]
+    , instructor :: Maybe Text
+    , start      :: Maybe Time
+    , end        :: Maybe Time
+    , enrolled   :: Maybe Int
+    , capacity   :: Maybe Int
+    , section    :: Maybe Text
 } deriving (Generic, Show)
 
 instance FromJSON Section
@@ -146,21 +154,28 @@ rmMidName ls = head ls : (init $ tail ls)
 schedule2section :: Schedule -> Section
 schedule2section s = Section {
           id          = fromJust $ class_number s
-        , section     = fromJust $ section (s :: Schedule)
-        , weekdays    = parseWeekday $ fromJust $ weekdays' =<< (date =<< head <$> classes s :: Maybe Date)
-        , instructor  = 
-            case (instructors =<< head <$> classes s) of 
-                Just [] -> ""
-                Just ls -> T.unwords $ reverse $ T.split (`elem` [',']) $ head ls
-                Nothing -> ""
-        , start   = parseTime $ fromJust $ start_time =<< date =<< head <$> classes s
-        , end     = parseTime $ fromJust $ end_time =<< date =<< head <$> classes s
-        , enrolled    = fromJust $ enrollment_total s
-        , capacity    = fromJust $ enrollment_capacity s
+        , section     = section (s :: Schedule)
+        , weekdays    = parseWeekday <$> (weekdays' =<< (date =<< firstClass))
+        , instructor  = do
+            c <- firstClass
+            i <- instructors c
+            case i of
+                []    -> Nothing
+                (x:_) -> Just $ T.unwords $ reverse $ T.split (`elem` [',']) x
+        , start   = parseTime <$> (start_time =<< (date =<< firstClass))
+        , end     = parseTime <$> (end_time =<< (date =<< firstClass))
+        , enrolled = enrollment_total (s :: Schedule)
+        , capacity = enrollment_capacity (s :: Schedule)
     }
     where
         weekdays' :: Date -> Maybe Text
         weekdays' = weekdays
+        firstClass :: Maybe Class
+        firstClass = 
+            case classes s of
+                Just []    -> Nothing
+                Just (x:_) -> Just x
+                Nothing    -> Nothing
     
 instance ResourcefulEntity Section where
     resourceIdentifier a = showt $ id a

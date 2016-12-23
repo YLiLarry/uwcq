@@ -29,9 +29,12 @@ export default Ember.Component.extend({
          // create description
          body.find('.description').html(course.get('description'));
          // create schedule table
-         var tbodyHTML = "";      
+         var tbodyHTML = '';      
          function showWeekDays(arr) {
             var s = '';
+            if (! arr) {
+               return '';
+            }
             s += arr[0] ? 'M'  : '';
             s += arr[1] ? 'T'  : '';
             s += arr[2] ? 'W'  : '';
@@ -39,10 +42,18 @@ export default Ember.Component.extend({
             s += arr[4] ? 'F'  : '';
             return s;
          }             
-         function showTime(time) {
-            return S.sprintf("%02d:%02d", time.hour, time.minute);
+         function showTime(from, to) {
+            if (! (from && to)) {
+               return '';
+            }
+            return S.sprintf('%02d:%02d - %02d:%02d', 
+                              from.hour, from.minute,
+                              to.hour, to.minute);
          }   
          function rmMidName(name) {
+            if (! name) {
+               return '';
+            }
             var ls = R.split(' ', name);
             return R.join(' ', [R.head(ls), R.last(ls)]);
          }                                                               
@@ -51,7 +62,7 @@ export default Ember.Component.extend({
                <tr>                                                                                 \
                   <td>'+c.get('section')+'</td>                                                     \
                   <td>'+showWeekDays(c.get('weekdays'))+'</td>                                      \
-                  <td>'+showTime(c.get('start'))+'-'+showTime(c.get('end'))+'</td>          \
+                  <td>'+showTime(c.get('start'), c.get('end'))+'</td>          \
                   <td>'+rmMidName(c.get('instructor'))+'</td>                                                  \
                   <td>'+c.get('enrolled')+'</td>                                                    \
                   <td>'+c.get('capacity')+'</td>                                                    \
