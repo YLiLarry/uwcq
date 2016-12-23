@@ -87,7 +87,7 @@ instance ResourcefulEntity Course where
 
 
 outputDocument :: Course -> Document Course
-outputDocument cs = mkDocument [cs] Nothing Nothing 
+outputDocument cs = mkDocumentSingle cs Nothing Nothing 
 
 main :: IO ()
 main = do

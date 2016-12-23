@@ -42,10 +42,14 @@ console.assert(regexCountMatch(/(a)/gi, 'abaa') == 3,
 
 
 export default Ember.Controller.extend({
+   // api calls
    init: function() {
       this._super();
       var self = this;
-      this.get('store').findAll('course').then(function(all) {
+      var courses = this.get('store').query('course', {
+           action: 'course-ls'
+         , term: 1171
+      }).then(function(all) {
          self.set('allCourses', all);
       });
    },
@@ -76,7 +80,11 @@ export default Ember.Controller.extend({
       onExpandEntry: function(course) {
          var self = this;
          // find description
-         var dp = this.get('store').findRecord('course', course.id, {reload: true});
+         var dp = this.get('store').queryRecord('course', {
+              action: 'course-info'
+            , subject: course.get('subject')
+            , number: course.get('number')
+         });
          // find schedules
          var schd = this.get('store').query('class', {
               action: 'course-sched'

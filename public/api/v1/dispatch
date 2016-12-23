@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-. ./setupQuery
+source ./setupQuery
 
 # used in route /courses/[id]
 # echo ${query[id]}
 
 if [ "${query_action}" == "course-ls" ]; then
-    q="courses.json"
+    q="terms/${query_term}/courses.json"
     
 elif [ "${query_action}" == "course-info" ]; then
-    q="courses/${query_id}.json"
+    q="courses/${query_subject}/${query_number}.json"
     
 elif [ "${query_action}" == "course-sched" ]; then
     q="terms/${query_term}/${query_subject}/${query_number}/schedule.json"

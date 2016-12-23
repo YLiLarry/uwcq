@@ -4,8 +4,92 @@
 		"selected_items":
 		[
 			[
+				"par",
+				"parseTime"
+			],
+			[
+				"clas",
+				"classes"
+			],
+			[
+				"from",
+				"fromJust"
+			],
+			[
+				"pa",
+				"parseWeekday"
+			],
+			[
+				"has",
+				"hasTh"
+			],
+			[
+				"sec",
+				"section"
+			],
+			[
+				"tr",
+				"trHTML"
+			],
+			[
+				"va",
+				"values"
+			],
+			[
+				"sch",
+				"sched"
+			],
+			[
+				"c",
+				"course"
+			],
+			[
+				"cat",
+				"catalog_number"
+			],
+			[
+				"sche",
+				"schedules"
+			],
+			[
+				"sched",
+				"Schedule"
+			],
+			[
+				"enr",
+				"enrollment_total"
+			],
+			[
+				"enro",
+				"enrollment_capacity"
+			],
+			[
+				"en",
+				"enrolled"
+			],
+			[
+				"ins",
+				"instructors"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
 				"cou",
-				"courses"
+				"course"
+			],
+			[
+				"bash",
+				"bashrc"
+			],
+			[
+				"mod",
+				"modify"
+			],
+			[
+				"dec",
+				"descr_file"
 			],
 			[
 				"rege",
@@ -135,10 +219,149 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "public/api/v1/dispatch",
+			"settings":
+			{
+				"buffer_size": 524,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/templates/components/home-course-entry.hbs",
+			"settings":
+			{
+				"buffer_size": 2119,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/components/home-course-entry.js",
+			"settings":
+			{
+				"buffer_size": 3042,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/home-course-entry.scss",
+			"settings":
+			{
+				"buffer_size": 3716,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/styles/app.scss",
+			"settings":
+			{
+				"buffer_size": 3636,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "curl https://www.student.cs.uwaterloo.ca/~cs341/lecture1.html > lecture1.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture2.html > lecture2.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture3.html > lecture3.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture4.html > lecture4.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture5.html > lecture5.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture6.html > lecture6.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture7.html > lecture7.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture8.html > lecture8.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture9.html > lecture9.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture10.html > lecture10.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture11.html > lecture11.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture12.html > lecture12.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture13.html > lecture13.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture14.html > lecture14.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture15.html > lecture15.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture16.html > lecture16.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture17.html > lecture17.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture18.html > lecture18.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture19.html > lecture19.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture20.html > lecture20.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture21.html > lecture21.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture22.html > lecture22.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture23.html > lecture23.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture24.html > lecture24.html\ncurl https://www.student.cs.uwaterloo.ca/~cs341/lecture25.html > lecture25.html\n\n",
+			"settings":
+			{
+				"buffer_size": 1983,
+				"line_ending": "Unix",
+				"name": "curl https://www.student.cs.uwaterloo.ca/~cs341/le"
+			}
+		},
+		{
+			"file": "/Users/ylilarry/Dropbox/CS341/notes/download",
+			"settings":
+			{
+				"buffer_size": 1717,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/ylilarry/Dropbox/CS341/notes/combine",
+			"settings":
+			{
+				"buffer_size": 511,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "makefile",
+			"settings":
+			{
+				"buffer_size": 483,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "api-tools/src/course-sched.hs",
+			"settings":
+			{
+				"buffer_size": 5429,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/api/data/cs136-sched.json",
+			"settings":
+			{
+				"buffer_size": 32917,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/class.js",
+			"settings":
+			{
+				"buffer_size": 379,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/home.js",
+			"settings":
+			{
+				"buffer_size": 4549,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
-	"build_system": "",
+	"build_system": "List",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"List",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					""
+				],
+				[
+					"Packages/Makefile/Make.sublime-build",
+					"Clean"
+				],
+				[
+					"Packages/User/build.sublime-build",
+					""
+				]
+			],
+			[
+				"List",
+				""
+			]
+		],
 		[
 			[
 				[
@@ -163,13 +386,69 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 147.0,
-		"last_filter": "new",
+		"height": 87.0,
+		"last_filter": "install",
 		"selected_items":
 		[
 			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"json",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"jso",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"set css",
+				"Set Syntax: CSS"
+			],
+			[
+				"set hm",
+				"Set Syntax: HTML"
+			],
+			[
+				"make",
+				"Build With: Make"
+			],
+			[
 				"new",
 				"ANF: New File"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ali",
+				"Preferences: Alignment Key Bindings – Default"
+			],
+			[
+				"align",
+				"Preferences: Alignment File Settings – Default"
+			],
+			[
+				"insal",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"forma",
+				"Clang Format: Format Selection"
+			],
+			[
+				"set bash",
+				"Set Syntax: Shell Script (Bash)"
 			],
 			[
 				"remove",
@@ -180,16 +459,8 @@
 				"SublimeAStyleFormatter: Format Current File"
 			],
 			[
-				"install",
-				"Package Control: Install Package"
-			],
-			[
 				"math",
 				"UnicodeMath: Insert"
-			],
-			[
-				"insal",
-				"Package Control: Install Package"
 			],
 			[
 				"renam",
@@ -208,7 +479,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 485.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -228,21 +499,70 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/ylilarry/lab/ember/uwcq"
+		"/Users/ylilarry/lab/ember/uwcq",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/test",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/test/Suite",
+		"/Users/ylilarry/lab/ember/uwcq/app",
+		"/Users/ylilarry/lab/ember/uwcq/app/helpers",
+		"/Users/ylilarry/lab/ember/uwcq/app/initializers",
+		"/Users/ylilarry/lab/ember/uwcq/app/models",
+		"/Users/ylilarry/lab/ember/uwcq/app/styles",
+		"/Users/ylilarry/lab/ember/uwcq/app/templates",
+		"/Users/ylilarry/lab/ember/uwcq/app/templates/components",
+		"/Users/ylilarry/lab/ember/uwcq/public",
+		"/Users/ylilarry/lab/ember/uwcq/public/api",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/data",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/tools",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/v1",
+		"/Users/ylilarry/lab/ember/uwcq/tests"
 	],
 	"file_history":
 	[
+		"/Users/ylilarry/lab/ember/uwcq/public/api/data/cs136-sched.json",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/v1/dispatch",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/v1/setupQuery",
+		"/Users/ylilarry/lab/ember/uwcq/app/models/course.js",
+		"/Users/ylilarry/lab/ember/uwcq/makefile",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src/course-sched.hs",
+		"/Users/ylilarry/lab/ember/uwcq/app/models/class.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/controllers/home.js",
+		"/Users/ylilarry/lab/ember/uwcq/app/adapters/class.js",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/v1/.htaccess",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/v1/courses",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src/course-ls.hs",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/uwcq-tools.cabal",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/Setup.hs",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src/courses.hs",
+		"/Users/ylilarry/lab/ember/uwcq/app/templates/components/home-course-entry.hbs",
+		"/Users/ylilarry/lab/ember/uwcq/app/templates/home.hbs",
+		"/Users/ylilarry/.bashrc",
+		"/Users/ylilarry/lab/ember/uwcq/app/styles/app.scss",
+		"/Users/ylilarry/lab/ember/uwcq/app/components/home-course-entry.js",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src/course-info.hs",
+		"/private/etc/apache2/httpd.conf",
+		"/Users/ylilarry/lab/ember/uwcq/ember-cli-build.js",
+		"/Users/ylilarry/lab/ember/uwcq/config/environment.js",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src/Lib/Prelude.hs",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/data/cs136.json",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/v1/parseQuery",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/stack.yaml",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/tools/.gitignore",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src/course-get-info.hs",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src/to-json-api.hs",
+		"/Users/ylilarry/lab/ember/uwcq/api-tools/src/get-course-info.hs",
+		"/Users/ylilarry/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/ylilarry/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/Users/ylilarry/Library/Application Support/Sublime Text 3/Packages/Terminal/Base File.sublime-settings",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/courses.hs",
+		"/Users/ylilarry/lab/ember/uwcq/public/api/tools/uwcq-tools.cabal",
+		"/Users/ylilarry/lab/ember/uwcq/public/.htaccess",
+		"/Users/ylilarry/lab/ember/uwcq/uwcq.sublime-project",
 		"/Users/ylilarry/lab/ember/uwcq/app/makefile",
 		"/Users/ylilarry/lab/ember/uwcq/app/components/home-searchbar.js",
-		"/Users/ylilarry/lab/ember/uwcq/app/components/home-course-entry.js",
-		"/Users/ylilarry/lab/ember/uwcq/app/templates/home.hbs",
 		"/Users/ylilarry/lab/ember/uwcq/app/components/schedule-calendar.js",
-		"/Users/ylilarry/lab/ember/uwcq/app/models/course.js",
-		"/Users/ylilarry/lab/ember/uwcq/app/templates/components/home-course-entry.hbs",
-		"/Users/ylilarry/.bashrc",
 		"/Users/ylilarry/lab/ember/uwcq/app/adapters/application.js",
-		"/Users/ylilarry/lab/ember/uwcq/app/controllers/home.js",
-		"/Users/ylilarry/lab/ember/uwcq/app/styles/app.scss",
 		"/Users/ylilarry/lab/ember/uwcq/app/controllers/schedule.js",
 		"/Users/ylilarry/lab/ember/uwcq/app/templates/components/schedule-calendar.hbs",
 		"/Users/ylilarry/lab/ember/uwcq/vendor/courses.json",
@@ -263,7 +583,7 @@
 	],
 	"find":
 	{
-		"height": 25.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -275,123 +595,137 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
-			"rw",
-			"dist",
-			"\\\\b",
-			"+",
-			"course.title",
+			"lecture",
+			">",
+			"curl",
+			"html",
+			"displayed",
+			"onSearch",
+			"button",
 			"\"",
-			"length",
-			"courses",
-			"rmed",
-			"newls",
-			"keyEq",
-			"catalog",
-			"category",
-			"name",
-			"catelog",
-			"name",
-			"key",
-			"MEM_START",
-			"trapcodenames",
-			"TLB miss on store",
-			"CORE_MAP_SIZE",
-			"consecutive",
-			"found_unused",
-			"{",
-			"CORE_MAP_START",
-			"core_map_frame",
-			",",
-			"lu",
-			", ",
-			"CORE_MAP_START",
-			"mem_end",
-			"mem_start",
-			"MEM_BYTES",
-			"N_PAGES",
-			"sys__exit",
-			"kill_curthread",
-			"epc",
-			"EPC",
-			"epc",
-			"d",
-			"D",
-			"@",
-			"M",
-			"@",
-			"D_x",
-			"D_w",
-			"<M,w>",
-			"^\\ast",
-			"in",
-			"S",
-			"R",
-			"b",
-			"a",
-			"union has exactly",
-			"{}",
-			",",
-			"\\times",
-			"[k_0,k_1,..,k_n]",
-			"a",
-			"\\inf",
-			"sum",
-			"path",
-			"p_",
-			"was",
-			"should be",
-			" by mistake",
-			"python",
-			"hamiltonian path",
-			"graph",
-			"SPH",
-			"minimal",
-			"arbiturary",
-			"arbituary",
-			"shortestWeight",
-			"shortestCycle",
-			"shortestPath",
-			"Sofar",
-			"shortestPathSofar",
-			"shortestPathWeight",
-			"found",
-			"weight",
-			"of the gra",
-			"texttt",
-			"textt",
-			"cycle",
-			"cE",
-			"ce",
-			"cE",
-			"_E",
-			"reduces to",
-			"main",
-			"transitiveClosure",
-			"reach",
-			"->",
-			"SET",
-			"true",
-			"A",
-			"a",
-			"A",
-			"coP",
-			"CoP",
-			"coP",
-			"A",
-			"\\not",
-			"floor(length/2)",
-			"O(",
-			"floor",
-			"foor",
-			"lfoor",
+			"endTime",
+			"startTime",
+			"\\",
+			"decimal",
+			"Text",
+			"fromLeft",
+			"readt",
+			"read",
+			":",
+			"Nothing",
+			"txt",
+			")",
+			"find",
+			"\"",
+			"txt",
+			"T.find \"",
+			"= \"",
+			"=",
+			"T.find",
 			"arr",
-			"2_sort",
-			"len",
-			"start",
-			"w"
+			"elem",
+			"weekdays",
+			"arr",
+			"elem",
+			"arr",
+			"T.find",
+			"find",
+			"\"",
+			"F",
+			"M",
+			"Text",
+			"section",
+			"\\",
+			"\"",
+			"class",
+			"tbodyHtml",
+			"trHtml",
+			"tr_html",
+			"tbody_html",
+			"\\",
+			"q",
+			"dispach",
+			"dispath",
+			"courses",
+			"[L]",
+			"data",
+			"2",
+			"r1",
+			"'class'",
+			"query",
+			"courses",
+			"response",
+			"subject",
+			"<-",
+			"unordered-containers",
+			"course_id",
+			"instructors",
+			"[L]",
+			"Schedule",
+			"showt",
+			"class_number",
+			"Class",
+			"class_number",
+			"Nothing",
+			"instructor",
+			"instructors",
+			"classes",
+			"Maybe ",
+			"fromJust $ ",
+			"(",
+			" as",
+			"as",
+			"=",
+			"Date",
+			"Course",
+			"Section",
+			"Class",
+			"OuputCourse",
+			"OutputCourse",
+			"Schedule",
+			"Section",
+			"Date",
+			"Output",
+			"Date",
+			"::",
+			"Text",
+			"::",
+			":",
+			"::",
+			"Course",
+			"\":",
+			"Course",
+			"Section",
+			"::",
+			",",
+			"\":",
+			"false",
+			"\":",
+			"\"",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"response",
+			"action \"expand",
+			"toggle(course.id",
+			".id",
+			"margin",
+			"body",
+			"innerHeight",
+			"this.course",
+			":",
+			",",
+			"course",
+			"expandedEntry",
+			"newData",
+			"subject",
+			"query_id",
+			"genericToEncoding"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -411,6 +745,390 @@
 	},
 	"groups":
 	[
+		{
+			"selected": 7,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/api/v1/dispatch",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 524,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								86,
+								86
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/templates/components/home-course-entry.hbs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2119,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1723,
+								1389
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/components/home-course-entry.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3042,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3002,
+								3005
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/styles/home-course-entry.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3716,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								69,
+								69
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/styles/app.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								473,
+								473
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 125.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1983,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1983
+							]
+						],
+						"settings":
+						{
+							"auto_name": "curl https://www.student.cs.uwaterloo.ca/~cs341/le",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/Users/ylilarry/Dropbox/CS341/notes/download",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1717,
+								1717
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/Users/ylilarry/Dropbox/CS341/notes/combine",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 511,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								511,
+								511
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 483,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								26,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Makefile/Makefile.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "api-tools/src/course-sched.hs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5429,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3394,
+								3394
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haskell/Haskell.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2046.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "public/api/data/cs136-sched.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 32917,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1732,
+								1732
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 620.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/models/class.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/controllers/home.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4549,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4015,
+								4015
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1030.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		},
 		{
 			"sheets":
 			[
@@ -434,11 +1152,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.807399332472,
 			1.0
 		],
 		"rows":
@@ -474,6 +1199,106 @@
 		"selected_items":
 		[
 			[
+				"makefi",
+				"makefile"
+			],
+			[
+				"ho",
+				"app/controllers/home.js"
+			],
+			[
+				"class",
+				"app/models/class.js"
+			],
+			[
+				"cs136-",
+				"public/api/data/cs136-sched.json"
+			],
+			[
+				"courseentry",
+				"app/templates/components/home-course-entry.hbs"
+			],
+			[
+				"homeent",
+				"app/components/home-course-entry.js"
+			],
+			[
+				"home.",
+				"app/controllers/home.js"
+			],
+			[
+				"course-en",
+				"app/components/home-course-entry.js"
+			],
+			[
+				"disp",
+				"public/api/v1/dispatch"
+			],
+			[
+				"cour",
+				"public/api/v1/courses"
+			],
+			[
+				"set",
+				"public/api/v1/setupQuery"
+			],
+			[
+				"course",
+				"public/api/v1/courses"
+			],
+			[
+				"make",
+				"makefile"
+			],
+			[
+				"adapter",
+				"app/adapters/class.js"
+			],
+			[
+				".ht",
+				"public/api/v1/.htaccess"
+			],
+			[
+				"course.js",
+				"app/models/course.js"
+			],
+			[
+				"home",
+				"app/controllers/home.js"
+			],
+			[
+				"setu",
+				"public/api/v1/setupQuery"
+			],
+			[
+				"hta",
+				"public/api/v1/.htaccess"
+			],
+			[
+				"setupq",
+				"public/api/v1/setupQuery"
+			],
+			[
+				"setup",
+				"api-tools/Setup.hs"
+			],
+			[
+				"htacc",
+				"public/api/v1/.htaccess"
+			],
+			[
+				"app.css",
+				"app/styles/app.scss"
+			],
+			[
+				"mod",
+				"app/models/course.js"
+			],
+			[
+				"home.h",
+				"app/templates/home.hbs"
+			],
+			[
 				"home.js",
 				"controllers/home.js"
 			],
@@ -495,8 +1320,8 @@
 	},
 	"select_symbol":
 	{
-		"height": 87.0,
-		"last_filter": "roundu",
+		"height": 392.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -570,7 +1395,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 188.0,
+	"side_bar_width": 224.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

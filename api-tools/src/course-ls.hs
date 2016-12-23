@@ -16,10 +16,10 @@ import Text.Printf
 import Prelude hiding (id)
 import TextShow
 import Data.Extend
+-- import Data.Hashable
 
 data InputCourse = InputCourse {
-      course_id      :: Maybe Text
-    , subject        :: Maybe Text
+      subject        :: Maybe Text
     , catalog_number :: Maybe Text
     , title          :: Maybe Text
 } deriving (Generic, Show)
@@ -48,7 +48,7 @@ parseInput str =
 outputCourse :: InputCourse -> OutputCourse
 outputCourse a = 
     OutputCourse {
-        id = fromJust $ course_id a
+        id = T.append (fromJust $ subject (a :: InputCourse)) (fromJust $ catalog_number (a :: InputCourse))
       , subject = fromJust $ subject (a :: InputCourse)
       , number = fromJust $ catalog_number a
       , title = fromJust $ title (a :: InputCourse)
@@ -62,7 +62,7 @@ instance ResourcefulEntity OutputCourse where
     resourceRelationships = const Nothing
 
 outputDocument :: [InputCourse] -> Document OutputCourse
-outputDocument cs = mkDocument (map outputCourse cs) Nothing Nothing 
+outputDocument cs = mkDocumentArray (map outputCourse cs) Nothing Nothing 
 
 
 main :: IO ()

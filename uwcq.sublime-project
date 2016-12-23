@@ -3,7 +3,7 @@
     [
         {
             "path": ".",
-            "folder_exclude_patterns": ["tmp", "node_modules", "dist", "bower_components"]
+            "folder_exclude_patterns": ["tmp", "node_modules", "dist", "bower_components", "api-tools/lib"]
         }
     ],
     "settings":

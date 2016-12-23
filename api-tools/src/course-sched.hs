@@ -171,7 +171,7 @@ instance ResourcefulEntity Section where
 
 
 outputDocument :: [Section] -> Document Section
-outputDocument cs = mkDocument cs Nothing Nothing 
+outputDocument cs = mkDocumentArray cs Nothing Nothing 
 
 main :: IO ()
 main = do

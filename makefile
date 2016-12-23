@@ -4,6 +4,7 @@ default:
 
 .PHONEY: build
 build:
+		cd api-tools && stack install
 		ember build
 
 .PHONEY: dep

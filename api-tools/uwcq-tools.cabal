@@ -33,7 +33,7 @@ executable course-ls
                       , NoTrace
                       , uwcq-tools
                       , data-extend-generic
-                      , json-api
+                      , json-api == 0.1.1.999
                       , text-show
                       , bytestring
                       , aeson
@@ -52,7 +52,7 @@ executable course-info
                       , NoTrace
                       , uwcq-tools
                       , data-extend-generic
-                      , json-api
+                      , json-api == 0.1.1.999
                       , text-show
                       , bytestring
                       , aeson
@@ -71,7 +71,7 @@ executable course-sched
                       , NoTrace
                       , uwcq-tools
                       , data-extend-generic
-                      , json-api
+                      , json-api == 0.1.1.999
                       , text-show
                       , bytestring
                       , aeson

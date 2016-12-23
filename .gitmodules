@@ -1,0 +1,3 @@
+[submodule "api-tools/lib/json-api"]
+	path = api-tools/lib/json-api
+	url = git@github.com:YLiLarry/json-api.git

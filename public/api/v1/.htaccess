@@ -8,7 +8,5 @@ AddHandler cgi-script .cgi
 # Allow numbers only in dynamic path segments!
 
 RewriteEngine On
-RewriteRule "^courses$" "dispatch?action=course-ls" [END]
-RewriteRule "^courses/(\d+)$" "dispatch?action=course-info&id=$1" [END]
 RewriteRule "^do$" "dispatch" [END]
 RewriteRule ".*" "404" [END]
